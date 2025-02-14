@@ -1,0 +1,247 @@
+img {
+    max-width: 100%;
+    height: auto;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 50px;
+  }
+  
+  .test-outer {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .test-background{
+    margin-left: 50px;
+  }
+  
+  .test-left {
+    margin-top: 140px;
+    width: 30%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .test-head-testimonial {
+    font-family: "Unna", serif;
+    font-size: 3em;
+    margin-left: 20px;
+    font-weight:bold;
+  }
+  
+  .test-par {
+    font-size: 2.0em;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .test-btn {
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+  }
+  
+  .test-right {
+    margin-top: 80px;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    margin-left: 120px;
+    padding: 40px;
+   
+  }
+  
+  .test-container-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    transition: transform 0.5s ease;
+  }
+  
+  .test-container {
+    width: 100%;
+    max-width: 250px;
+    flex-shrink: 0;
+    border: 1.8px solid black;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+  }
+  .test-container:hover {
+    transform: translateY(-10px) scale(1.05);
+    cursor: pointer;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .test-star h5 {
+    margin-top: 10px;
+  }
+  
+  .test-para {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "Unna", serif;
+  }
+  
+  .test-third {
+    margin-top: 15px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+  }
+  
+  .test-scroll-button {
+    background-color: #e3342f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .test-scroll-button.forward {
+    margin-left: 90%;
+    font-size: 13px;
+    
+  }
+  
+  .test-scroll-button.backward {
+    margin-left: -5%;
+    font-size: 13px;
+    position: fixed;
+    
+  }
+  
+  .test-scroll-button:hover {
+    background-color: #d80f08;
+  }
+  
+  .test-Wrap{
+   
+     margin-left: 10%; 
+     width: 70%;
+  }
+  
+  
+  
+  @media (max-width: 870px) {
+    .test-outer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .test-left {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .test-right {
+      width: 100%;
+      overflow: visible;
+    }
+  
+    .test-container-wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .test-btn{
+      margin-left: 42%;
+    }
+  
+    .test-background {
+      width: 200px;
+      margin-left: 38%;
+    }
+    
+    .test-background img {
+      max-width: 20%;
+    }
+  
+    .test-container {
+      width: calc(50% - 20px);  
+      max-width: 300px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+  
+    }
+  
+    .test-Wrap{
+      margin-left: -220px;
+      width: 90%;
+    }
+    .test-scroll-button {
+      display: none; 
+    }
+  }
+  
+  
+  
+  
+  @media (max-width: 728px) {
+    .test-outer {
+      align-items: center;
+      padding: 10px;
+    }
+   
+    .test-head-testimonial{
+      margin: auto;
+    }
+  
+    .test-left{
+      align-items: center;
+    }
+  
+    .test-left .test-head-testimonial {
+      font-size: 2.2em;
+      margin-top: -20px;
+    }
+  
+    .test-left .test-par {
+      font-size: 1.8em;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+  
+    .test-container {
+      width: 90%;
+      max-width: 250px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .test-background{
+      margin-left: 0%;
+      display: grid;
+      place-items: center;
+      width: 200px;
+    }
+    .test-btn {
+      width: 120px;
+      margin: 20px auto;
+    }
+  }

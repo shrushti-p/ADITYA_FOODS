@@ -1,0 +1,213 @@
+
+
+  .about-us-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+   
+  }
+  
+  /* Header Section */
+  .about-us-header {
+    text-align: center;
+    background: #fdf2e9;
+    padding: 40px 0;
+  }
+  
+  .about-us-header h1 {
+    font-size: 36px;
+    color: #111111;
+  }
+  
+  .about-us-header p {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Story Section */
+  
+   .story-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Title and Subtitle Styling */
+.section_title {
+    font-weight: 700;
+    font-size: 44px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 56px;
+    margin-top: 30px;
+}
+
+.sub_title {
+    color: #f7b035;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: 'Delius Unicase', cursive;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 50px;
+}
+
+/* Content Styling */
+.text-content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.image-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .story-section {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .text-content {
+        margin-right: 5px;
+        padding: 10px;
+    }
+
+    .image-content {
+        order: 2;
+        padding: 10px;
+    }
+
+    .image-content img {
+        max-width: 80%;
+    }
+}
+
+  /* Why Choose Us Section */
+  .why-choose-us {
+    background: #fdf2e9;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  
+  .choose-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .choose-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .choose-card h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .choose-card p {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .team-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  
+  }
+  
+  .team-member {
+    text-align: center;
+    flex: 1 1 200px; 
+  }
+  
+  .team-member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f3e879;
+    padding: 7px;
+    margin-bottom: 1rem;
+    margin-top: 40px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.5rem;
+    color: #f7b035;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  @media (max-width: 480px) {
+  
+
+    .team-member-image {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .team-member h3 {
+      font-size: 1.25rem;
+    }
+  
+    .team-member p {
+      font-size: 0.9rem;
+    }
+    
+  
+  }
+  
+  @media (max-width: 768px) {
+    
+    .team-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .team-member {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  
+
+
+

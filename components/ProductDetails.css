@@ -1,0 +1,233 @@
+.product-modal {
+  position: fixed; /* Makes it overlay everything */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensures it appears on top */
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#38addf,white, white, white);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 70%;
+    max-height: 600px;
+    min-width: 708px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    overflow-y: scroll;
+  }
+  
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f1002d;
+  /* color: #F1002D; */
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+  
+.product-deets{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 15px;
+}
+
+  .product-image {
+    width: 330px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* border: #333 solid 2px; */
+  }
+  
+  .product-image img {
+    width: 50%;
+    border-radius: 5px;
+  }
+
+  /* .product-image img {
+    width: 100%;
+    height: auto;
+  } */
+  
+  .nav-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .product-info {
+    margin: auto;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 650px;
+    min-width: 300px;
+    /* border: #333 solid 2px; */
+  }
+  
+  .bestseller {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .product-info .name{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .rating {
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 10px;
+  }
+  
+  .description {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .weight-section {
+    margin: 15px 0;
+  }
+  
+  .weight-section button {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background: white;
+    border-radius: 5px;
+    color: #000000;
+  }
+  
+  .weight-section .selected {
+    background: black;
+    color: white;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .add-to-cart, .buy-now {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .add-to-cart {
+    background: #003366;
+    color: white;
+  }
+  
+  .buy-now {
+    background: #f5a623;
+    color: white;
+  }
+
+  .additional-information{
+    margin: auto;
+    width: 80%;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .tab {
+    padding: 10px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab.active {
+    color: red;
+    border-bottom: 2px solid red;
+  }
+  
+  .additional-info {
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  
+  .additional-info table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th{
+    background: #003366;
+  }
+  
+  .additional-info td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+
+
+  /* ProductDetails.css */
+
+
+/* Image Styling */
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,138 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer Container */
+.footer {
+  background-color: #f9f9f9;
+
+  text-align: center;
+}
+
+/* Horizontal Line */
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  max-width: 1200px; /* Limit the width for better alignment */
+  margin: 0 auto; /* Center the footer content */
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Social Section - Align to the Left */
+.footer-section.social-section {
+  text-align: left;
+}
+
+/* Contact Section - Align to the Center */
+.footer-section.contact-section {
+  text-align: center;
+}
+
+/* Contact Section Content Alignment */
+.footer-section.contact-section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content below the heading */
+  padding: 0;
+}
+
+/* Links Section - Align to the Right */
+.footer-section.links-section {
+  text-align: right;
+  margin-right: 20px; /* Move Quick Links slightly to the right */
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  color: #e3342f;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Social Icons */
+.social-icon {
+  margin-right: 10px;
+  color: #e3342f;
+}
+
+/* Contact Icons */
+.contact-icon {
+  margin-right: 10px;
+  color: #e3342f;
+}
+
+/* Links Section - Align Links to the Right */
+.footer-section.links-section ul li {
+  justify-content: flex-end; /* Align links to the right */
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #e3342f;
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  background-color: pink;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section.links-section ul li {
+    justify-content: center; /* Center links on smaller screens */
+  }
+
+  .footer-section.contact-section ul {
+    align-items: center; /* Center contact content on smaller screens */
+  }
+}
+
+
+  
