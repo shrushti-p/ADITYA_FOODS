@@ -118,7 +118,7 @@ img {
     border-radius: 5px;
   }
   
-  button {
+  .submit {
     background: #ff9800;
     color: white;
     border: none;
@@ -128,7 +128,7 @@ img {
     font-size: 16px;
   }
   
-  button:hover {
+  .submit:hover {
     background: #e68900;
   }
   

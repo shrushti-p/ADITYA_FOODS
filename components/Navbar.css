@@ -2,7 +2,7 @@
 
 .navbar {
     width: 100%;
-    background-image: linear-gradient(#38addf, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(#87d9ff, rgba(255, 255, 255, 0));
   }
   
   .navbar-top {
@@ -14,11 +14,13 @@
 
   .logo{
     margin-left: 2%;
-  }
-  
-  .logo img{
     width: 140px;
-    margin-top: 0;
+    height: 100PX;
+    /* border: #000000 solid; */
+    background-image: url("/images/logo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .search-bar {

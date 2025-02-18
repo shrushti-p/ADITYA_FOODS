@@ -29,7 +29,7 @@ const menuItems = [
   { id: 7, name: "Paste", price: 12.80, categoryId: 3, image: "images/GG paste.png", description: "ggpaste" },
   { id: 8, name: "Paste", price: 13.30, categoryId: 3, image: "images/ggpaste.jpeg", description: "ggpaste" },
   { id: 1, name: "Chutney", price: 24.12, categoryId: 4, image: "images/oil.png", description: "Chutney" },
-  { id: 6, name: "Spectacular Whatever Chutney", price: 22.40, categoryId: 4, image: "images/ggpaste.jpeg", description: "Chutney—a luscious elixir of flavors, where sweet meets spice in a rhapsody of tangy delight. A single spoonful ignites the senses, a dance of zest and warmth that lingers like a poetic aftertaste." },
+  { id: 6, name: "Spectacular Whatever Chutney", price: 22.40, categoryId: 4, image: "images/paste_og.jpeg", description: "Chutney—a luscious elixir of flavors, where sweet meets spice in a rhapsody of tangy delight. A single spoonful ignites the senses, a dance of zest and warmth that lingers like a poetic aftertaste." },
   { id: 7, name: "Chutney", price: 12.80, categoryId: 4, image: "images/GG Chutney.png", description: "ggChutney" },
   { id: 8, name: "Chutney", price: 13.30, categoryId: 4, image: "images/ggChutney.jpeg", description: "ggChutney" },
   { id: 9, name: "Peas", price: 32.90, categoryId: 5, image: "images/peas.jpg", description: "peas?" },

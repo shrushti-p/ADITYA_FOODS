@@ -10,6 +10,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: #F1002D;
+  text-align: center;
 }
 
 /* Category Navigation */
@@ -21,8 +22,7 @@
   margin: auto auto 20px auto ;
   border-radius: 10px;
   background-color: #38addf27;
- 
-}
+ }
 
 .category-button {
   background: none;

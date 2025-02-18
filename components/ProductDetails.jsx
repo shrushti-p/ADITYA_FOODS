@@ -7,18 +7,18 @@ const ProductDetails = ({ product, onClose }) => {
   const [selectedWeight, setSelectedWeight] = useState("1L");
 
   return (
-    <div className="product-modal">
-      <div className="product-container">
+    <div className="p-modal">
+      <div className="p-container">
         <button className="close-button" onClick={onClose}>✖</button>
 
-        <div className="product-deets">
+        <div className="p-deets">
           {/* Product Image Section */}
-          <div className="product-image">
-            <img src={product.image} alt={product.name} />
+          <div className="p-image">
+            <img className="img" src={product.image} alt={product.name} />
           </div>
 
           {/* Product Information Section */}
-          <div className="product-info">
+          <div className="p-info">
             <p className="bestseller">Bestseller</p>
             <p className="name">{product.name}</p>
             <p className="rating">⭐ 5.0 | 204 Reviews</p>

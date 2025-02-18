@@ -1,7 +1,7 @@
 /* General Styles */
 .recipe-container {
   /* background: linear-gradient(to bottom, #c2e9fb, #fbc2eb); */
-  background-color: #fdf2e9;
+  background-color: none;
  
   text-align: center;
 }
@@ -51,7 +51,7 @@
 }
 
 .recipe-button {
-  background: #d32f2f;
+  background: #f1002d;
   color: white;
   border: none;
   padding: 10px 10px;

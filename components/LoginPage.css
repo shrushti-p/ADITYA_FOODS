@@ -33,14 +33,14 @@ body {
   }
   
   .input-field:focus {
-    border-color: #fbbf24;
+    border-color: #f1002d;
     outline: none;
   }
   
   /* Login Button */
   .login-btn {
     width: 100%;
-    background: #fbbf24;
+    background: #f1002d;
     color: white;
     padding: 12px;
     border: none;
@@ -51,7 +51,7 @@ body {
   }
   
   .login-btn:hover {
-    background: #f59e0b;
+    background: #f1002d;
   }
   
  

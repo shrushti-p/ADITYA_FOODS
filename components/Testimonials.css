@@ -107,7 +107,7 @@ img {
   }
   
   .test-scroll-button {
-    background-color: #e3342f;
+    background-color: #F1002D;
     color: white;
     border: none;
     border-radius: 50%;
@@ -139,7 +139,7 @@ img {
   }
   
   .test-scroll-button:hover {
-    background-color: #d80f08;
+    background-color: #F1002D;
   }
   
   .test-Wrap{
