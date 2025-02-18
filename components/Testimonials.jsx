@@ -1,9 +1,8 @@
 import { FaStar } from "react-icons/fa";
 import { SlArrowRight } from "react-icons/sl";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "./Testimonials.css";
-import { useState } from "react";
-import { FaArrowLeft } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 const testimonialsData = [
   {
@@ -38,21 +37,33 @@ const testimonialsData = [
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 728);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleScrollForward = () => {
-    if (currentIndex < testimonialsData.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 2 >= testimonialsData.length ? 0 : prevIndex + 2
+    );
   };
 
   const handleScrollBackward = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0
+        ? testimonialsData.length - 2
+        : prevIndex - 2
+    );
   };
 
   return (
-    <div className="test-outer">
+    <div className={`test-outer ${isMobile ? "mobile-view" : ""}`}>
       <div className="test-left">
         <h2 className="test-head-testimonial">Testimonials</h2>
         <img
@@ -65,39 +76,38 @@ const Testimonials = () => {
           <br />
           Customer's Say?
         </div>
-
         <button type="button" className="btn btn-danger test-btn">
           Read All <SlArrowRight />
         </button>
-
-        <button
-          className="test-scroll-button forward"
-          onClick={handleScrollForward}
-          disabled={currentIndex === testimonialsData.length - 1}
-        >
-          <FaArrowRight />
-        </button>
       </div>
 
-      <div className="test-Wrap">
-        <div className="test-right">
+      
+
+      <div className="test-right">
+    <div className="Wrap">
+    <div className="test-arrows">
           <button
             className="test-scroll-button backward"
             onClick={handleScrollBackward}
-            disabled={currentIndex === 0}
           >
             <FaArrowLeft />
           </button>
 
-          <div className="test-container-wrapper">
-            {testimonialsData.map((testimonial, index) => (
-              <div
-                key={index}
-                className="test-container"
-                style={{
-                  transform: `translateX(-${currentIndex * 100}%)`,
-                }}
-              >
+          <button
+            className="test-scroll-button forward"
+            onClick={handleScrollForward}
+          >
+            <FaArrowRight />
+          </button>
+        </div>
+   
+        <div className="test-container-wrapper">
+          
+       
+          {testimonialsData
+            .slice(currentIndex, currentIndex + 2)
+            .map((testimonial, index) => (
+              <div key={index} className="test-container">
                 <div className="test-star">
                   <div
                     style={{
@@ -130,8 +140,8 @@ const Testimonials = () => {
                 </div>
               </div>
             ))}
-          </div>
         </div>
+      </div>
       </div>
     </div>
   );

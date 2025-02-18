@@ -16,7 +16,7 @@ import HowToOrder from '../components/HowToOrder';
 import Categories from "../components/Categories";
 import ProductDetails from "../components/ProductDetails";
 import HeroProducts from "../components/HeroProducts";
-// import Testimonials from '../components/Testimonials';
+import Testimonials from '../components/Testimonials';
 
 
 
@@ -33,7 +33,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/recipes" element={<InspiringRecipes />} />
-        {/* <Route path="/testimonials" element={<Testimonials />} /> */}
+        {/* {<Route path="/testimonials" element={<Testimonials />} /> } */}
         <Route path="/hero-products" element={<HeroProducts />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/product/:id" element={<ProductDetails />} />
