@@ -10,13 +10,13 @@
   /* Header Section */
   .about-us-header {
     text-align: center;
-    background: #dcf4ff;
     padding: 40px 0;
   }
   
   .about-us-header h1 {
-    font-size: 36px;
-    color: #111111;
+    font-size: 40px; 
+    color: #f1002d;
+    font-weight: bold;
   }
   
   .about-us-header p {
