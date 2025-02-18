@@ -33,14 +33,14 @@ body {
 }
 
 .input-field:focus {
-  border-color: #fbbf24;
+  border-color: #F1002D;/*fbbf24*/
   outline: none;
 }
 
 /* Signup Button */
 .signup-btn {
   width: 100%;
-  background: #fbbf24;
+  background: #F1002D;
   color: white;
   padding: 12px;
   border: none;
@@ -51,5 +51,5 @@ body {
 }
 
 .signup-btn:hover {
-  background: #f59e0b;
+  background: #F1002D;
 }

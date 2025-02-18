@@ -40,20 +40,6 @@
   color: #666;
 }
 
-.floating-burger {
-  width: 150px;
-  height: auto;
-  position: absolute;
-  bottom: -100%;
-  left: 20%;
-  transform: translateX(-50%);
-  animation: floatBurger 3s ease-in-out infinite;
-}
-
-@keyframes floatBurger {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-10px); }
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -65,7 +51,5 @@
       max-width: 100%;
   }
 
-  .floating-burger {
-      display: none;
-  }
+ 
 }

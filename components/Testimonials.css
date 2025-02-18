@@ -12,6 +12,7 @@
   padding: 30px;
   background-color: aquamarine;
 }
+
 .test-container-wrapper {
   display: flex;
   gap: 25px;
@@ -76,4 +77,13 @@
   .test-container {
     width: 90%;
   }
+
+  .Wrap{
+    max-width: 728px;
+    margin: 0;
+    margin-left: -50px;
+  }
+
+  
+
 }

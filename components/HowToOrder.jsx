@@ -46,7 +46,7 @@ const HowToOrder = () => {
         </div>
       </div>
 
-      <img src="images/garlic.png" alt="Floating Burger" className="floating-burger" />
+     
     </div>
   );
 };

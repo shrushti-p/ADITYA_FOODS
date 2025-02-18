@@ -1,0 +1,95 @@
+/* General Styling */
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #F1002D;
+  }
+  
+  /* Container for Products */
+  .products-container-hero {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensures 3 products per row */
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  /* Individual Product Card */
+  .product {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(#ffffff 63%, #dcf4ff 37%);
+    box-shadow: 
+    /* inset 0 0 20px 10px #dcf4ff,  */
+    0 6px 12px rgba(0, 0, 0, 0.15); /* Outer shadow (black) */
+  }
+  
+  .product:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Product Image */
+.product-image {
+    width: 50%;  /* Ensures image takes full width of its container */
+    aspect-ratio: 189.1 / 283.65; /* Maintains the specified aspect ratio */
+    object-fit: cover; /* Ensures the image covers the space properly */
+    border-radius: 8px;
+  }
+
+  .prod-information{
+    /* background-color: rgb(54, 161, 255); */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  
+  
+  /* Product Name */
+  .product .h3 {
+    /* font-size: 1.2rem; */
+    margin: 10px 0;
+    color: #222;
+  }
+  
+  /* Price Styling */
+  .product-price {
+    font-size: 1.1rem;
+    color: #f1002d;
+    font-weight: bold;
+  }
+  
+  /* Product Description */
+  .product-description {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+    /* margin-top: 10px; */
+    text-align: left;
+    padding: 0 10px;
+    width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .products-container-hero {
+      grid-template-columns: repeat(2, 1fr); /* 2 products per row for smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .products-container-hero {
+      grid-template-columns: repeat(1, 1fr); /* 1 product per row for very small screens */
+    }
+  }
+  

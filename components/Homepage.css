@@ -39,7 +39,7 @@
 .main-title {
   font-size: 3.1rem;
   font-weight: bold;
-  color: #e3342f;
+  color: #f1002d;
   margin-bottom: 1rem;
   
 }
@@ -97,9 +97,10 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid hsl(43, 86%, 59%);
-  background-color: #f3e879;
+  border: 3px solid #dc9e01;
+  background-color: #ffc534;
   padding: 7px;
+  margin-bottom: 0;
 }
 
 .image-name {
@@ -115,7 +116,7 @@
   position: absolute;
   bottom: 60%;
   transform: translateY(50%);
-  background-color: #e3342f;
+  background-color: #f1002d;
   color: white;
   border: none;
   border-radius: 50%;
@@ -140,7 +141,7 @@
 
 .scroll-forward-button:hover,
 .scroll-backward-button:hover {
-  background-color: #c5302c;
+  background-color: #f1002d;
 }
 
 .forward-icon,

@@ -14,7 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px 20px;
-    background-color: aquamarine;
+    background-color: #dcf4ff;
   }
   
   /* Rows */
@@ -29,7 +29,7 @@ body {
   /* Individual Stat Item */
   .stat-item {
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
     min-width: 200px;
@@ -54,3 +54,43 @@ body {
     font-weight: 500;
   }
   
+  
+.floating-burger {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: -260%;
+  left: 25%;
+  transform: translateX(-50%);
+  animation: floatBurger 3s ease-in-out infinite;
+}
+.floating-burger3 {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: -300%;
+  left: 10%;
+  transform: translateX(-50%);
+  animation: floatBurger 3s ease-in-out infinite;
+}
+.floating-burger4 {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: -280%;
+  left: 85%;
+  transform: translateX(-50%);
+  animation: floatBurger 3s ease-in-out infinite;
+}
+
+@keyframes floatBurger {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  
+  .floating-burger ,.floating-burger3, .floating-burger4 {
+      display: none;
+  }
+}

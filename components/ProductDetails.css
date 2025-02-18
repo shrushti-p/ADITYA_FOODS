@@ -1,4 +1,4 @@
-.product-modal {
+.p-modal {
   position: fixed; /* Makes it overlay everything */
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   z-index: 1000; /* Ensures it appears on top */
 }
 
-.product-container {
+.p-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,8 +19,9 @@
     padding: 20px;
     font-family: Arial, sans-serif;
     width: 70%;
-    max-height: 600px;
-    min-width: 708px;
+    height: 70%;
+    /* max-height: 600px;
+    min-width: 708px; */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: relative;
@@ -38,49 +39,53 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+  border-radius: 20%;
 }
   
-.product-deets{
+.p-deets{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 0;
     margin-top: 15px;
+    width: 100%;
+    /* text-align: center; */
 }
 
-  .product-image {
-    width: 330px;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    /* border: #333 solid 2px; */
-  }
+.p-image {
+  width: 30%;
+  /* height: 150px; */
+  object-fit: cover;
+  border-radius: 8px;text-align: center;
+  margin: auto 20px auto 20px;
+}
   
-  .product-image img {
+  .p-image .img {
     width: 50%;
     border-radius: 5px;
+    margin: auto auto;
   }
 
-  /* .product-image img {
+  /* .p-image img {
     width: 100%;
     height: auto;
   } */
   
-  .nav-button {
+  /* .nav-button {
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
     margin: 0 10px;
-  }
+  } */
   
-  .product-info {
+  .p-info {
     margin: auto;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 650px;
-    min-width: 300px;
+    width: 65%;
     /* border: #333 solid 2px; */
+    margin: 20px;
   }
   
   .bestseller {
@@ -91,7 +96,7 @@
     padding: 0;
   }
 
-  .product-info .name{
+  .p-info .name{
     color: rgb(0, 0, 0);
     font-weight: 600;
     font-size: 35px;
@@ -186,8 +191,8 @@
   }
   
   .tab.active {
-    color: red;
-    border-bottom: 2px solid red;
+    color: #f1002d;
+    border-bottom: 2px solid #f1002d;
   }
   
   .additional-info {
@@ -211,13 +216,25 @@
     padding: 10px;
     border-bottom: 1px solid #ddd;
   }
-  
 
-
-  /* ProductDetails.css */
-
-
-/* Image Styling */
+  @media (max-width: 990px) {
+  .p-deets{
+    flex-direction: column;
+  }
+  .p-image {
+    width: 90%;
+  }
+  .p-info .name{
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .weight-section {
+    margin: auto;
+  }
+  .p-info{
+    width: 90%;
+  }
+  }
 
 
 /* Fade-in animation */

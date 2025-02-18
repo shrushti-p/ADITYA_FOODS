@@ -9,6 +9,8 @@ const ContactUs = () => {
       <div className="contact-header">
         <h2>Contact Us</h2>
         <p><a href="/" className="footer-links">Home</a> &gt; Contact Us</p>
+        <img src="images/penut.png" alt="Floating penut" className="floating-burger1" />
+        <img src="images/custerdapple4.png" alt="Floating custerdapple" className="floating-burger2" />
       </div>
 
       {/* Contact Information */}
@@ -62,7 +64,7 @@ const ContactUs = () => {
               </div>
               <input type="text" placeholder="Subject" required />
               <textarea placeholder="Write your message here..." required></textarea>
-              <button type="submit">SEND MESSAGE</button>
+              <button className="submit" type="submit">SEND MESSAGE</button>
             </form>
           </div>
         </div>

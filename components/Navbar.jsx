@@ -20,7 +20,6 @@ export default function Navbar() {
       {/* Top Section */}
       <div className="navbar-top">
         <div className="logo">
-          <img src="images/logo.png" alt="Logo" />
         </div>
         <div className="search-bar">
           <FiSearch className="search-icon" />

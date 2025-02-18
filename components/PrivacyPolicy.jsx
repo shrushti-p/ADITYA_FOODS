@@ -9,6 +9,9 @@ const PrivacyPolicy = () => {
        
         <h1>Privacy Policy</h1>
         <p><a href="/" className="footer-links">Home</a> &gt; Privacy Policy</p>
+
+        <img src="images/jamun1.png" alt="Floating jamun" className="floating-burger1" />
+        <img src="images/mango.png" alt="Floating mango" className="floating-burger2" />
       </div>
 
       {/* Policies Section */}

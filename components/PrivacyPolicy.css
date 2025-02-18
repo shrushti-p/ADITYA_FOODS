@@ -16,16 +16,14 @@
   /* Title Section */
   .title-section {
     text-align: center;
-    background: #fdf2e9;
-    padding: 40px 0;
-   
-
+    padding: 40px 0; 
   }
   
 
   .title-section h1 {
-    font-size: 36px;
-    color: #111111;
+    font-size: 40px; 
+    color: #f1002d;
+    font-weight: bold;
   }
   
   .title-section p {
@@ -36,19 +34,20 @@
   .policies-section {
     display: flex;
     flex-direction: column;
+    border-top: #71d4ff solid 1px;
   
   }
   
   .policy {
-    background-color: #f9f9f9;
+    background-color: none;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   }
   
   .policy-title {
     font-size: 1.5rem;
-    color: #e3342f;
+    color: #f1002d;
     margin-bottom: 1rem;
   }
   

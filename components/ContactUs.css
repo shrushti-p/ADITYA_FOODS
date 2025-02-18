@@ -4,25 +4,21 @@
     
   }
   
- 
-
   .contact-header {
     text-align: center;
-    background: #fdf2e9;
     padding: 40px 0;
   }
   
-  .contact-header h1 {
-    font-size: 36px;
-    color: rgb(51, 47, 45);
+  .contact-header h2 {
+    font-size: 40px; 
+    color: #f1002d;
+    font-weight: bold;
   }
   
   .contact-header p {
     font-size: 14px;
     color: #888;
   }
-   
-  
   
   .contact-info {
     display: flex;
@@ -32,7 +28,7 @@
   }
   
   .info-card {
-    background: #fdf3e7;
+    background: #e7f9fda3;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -44,8 +40,6 @@
     color: #ff9800;
     margin-bottom: 20px;
   }
-  
-
 
   .section_title {
     font-weight: 700;
@@ -54,7 +48,6 @@
     line-height: 56px;
     margin-top: 30px  ;
 }
-
 
 .sub_title {
   color: #f7b035;
@@ -116,9 +109,10 @@ img {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: rgb(255, 255, 255);
   }
   
-  button {
+  .submit {
     background: #ff9800;
     color: white;
     border: none;
@@ -128,7 +122,7 @@ img {
     font-size: 16px;
   }
   
-  button:hover {
+  .submit:hover {
     background: #e68900;
   }
   
