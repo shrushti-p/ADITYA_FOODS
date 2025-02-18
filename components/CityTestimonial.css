@@ -1,6 +1,7 @@
 /* Styles for large screens (desktops/tablets) */
 
-.test-container-wrapper {
+.city-container-wrapper {
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   gap: 25px;
@@ -10,23 +11,47 @@
   width: 100%;
   position: relative;
   align-items: end;
-  background-color: blanchedalmond;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 50px;
 }
 
-.test-container {
+.city-image{
+  
+  margin-left: 40%;
+}
+.city-heading{
+  margin-top: 40px;
+  text-align: center;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.city-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 
+              0 8px 10px rgba(0, 0, 0, 0.2);
+}
+.city-container {
   width: 280px;
   height: 380px;
   flex-shrink: 0;
-  border: 1.8px solid black;
   border-radius: 12px;
-  padding: 15px;
+  padding: 20px;
   background-color: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 
+              0 4px 6px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   transform: translateY(0);
+  overflow: hidden;
+  border: solid 1px black ;
 }
 
-.test-arrows {
+.city-arrows {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,14 +65,14 @@
   pointer-events: none;
 }
 
-.test-scroll-button {
+.city-scroll-button {
   background-color: #e3342f;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -57,15 +82,28 @@
   transition: transform 0.3s;
 }
 
-.test-scroll-button:hover {
+.city-scroll-button:hover {
   transform: scale(1.1);
 }
 
-/* Responsive Styles for screens smaller than 728px */
-/* Responsive Styles for screens smaller than 728px */
-/* Responsive Styles for screens smaller than 728px */
+.city-para{
+  height: 200px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+}
+.city-container-heading{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-style: oblique;
+}
+
+.city-third{
+  margin-bottom: 0;
+  text-align: center;
+}
+
+
 @media (max-width: 700px) {
-  .test-container-wrapper {
+  .city-container-wrapper {
     overflow-x: auto;
     justify-content: flex-start;
     scroll-snap-type: x mandatory;
@@ -76,14 +114,29 @@
 
   }
 
-  .test-container {
+  .city-para{
+    height:180px;
+    font-size: 15px;
+  }
+  .city-container-heading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 18px;
+ }
+
+  .city-third{
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .city-container {
     width: 37%; /* Adjusted for better visibility */
     min-width: 37%;
     margin-left: 15px;
     scroll-snap-align: center;
   }
 
-  .test-arrows {
+  .city-arrows {
     position: absolute;
     top: 50%; /* Positioned vertically in the middle */
     left: 86%;
@@ -96,12 +149,12 @@
   }
 
   /* Hide the left arrow */
-  .test-scroll-button:first-child {
+  .city-scroll-button:first-child {
     display: none;
   }
 
   /* Style the right arrow to be between two cards */
-  .test-scroll-button:last-child {
+  .city-scroll-button:last-child {
     pointer-events: all;
     position: relative;
     transform: translateX(50%); /* Moves the arrow to the right */

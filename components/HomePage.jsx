@@ -98,9 +98,9 @@ const HomePage = () => {
     <HeroProducts></HeroProducts>
     <StatsSection></StatsSection>
     <HowToOrder></HowToOrder>
-   
+    {<Testimonials></Testimonials> }
     <Footer></Footer>
-    {/* <Testimonials></Testimonials> */}
+   
 
     </>
   );

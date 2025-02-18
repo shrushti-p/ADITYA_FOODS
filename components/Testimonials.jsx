@@ -3,6 +3,7 @@ import { SlArrowRight } from "react-icons/sl";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "./Testimonials.css";
 import { useState, useEffect } from "react";
+import CityTestimonial from "./CityTestimonial";
 
 const testimonialsData = [
   {
@@ -56,13 +57,12 @@ const Testimonials = () => {
 
   const handleScrollBackward = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0
-        ? testimonialsData.length - 2
-        : prevIndex - 2
+      prevIndex === 0 ? testimonialsData.length - 2 : prevIndex - 2
     );
   };
 
   return (
+    <>
     <div className={`test-outer ${isMobile ? "mobile-view" : ""}`}>
       <div className="test-left">
         <h2 className="test-head-testimonial">Testimonials</h2>
@@ -81,69 +81,67 @@ const Testimonials = () => {
         </button>
       </div>
 
-      
-
       <div className="test-right">
-    <div className="Wrap">
-    <div className="test-arrows">
-          <button
-            className="test-scroll-button backward"
-            onClick={handleScrollBackward}
-          >
-            <FaArrowLeft />
-          </button>
+        <div className="Wrap">
+          <div className="test-container-wrapper">
+            <div className="test-arrows">
+              <button
+                className="test-scroll-button backward"
+                onClick={handleScrollBackward}
+              >
+                <FaArrowLeft />
+              </button>
 
-          <button
-            className="test-scroll-button forward"
-            onClick={handleScrollForward}
-          >
-            <FaArrowRight />
-          </button>
-        </div>
-   
-        <div className="test-container-wrapper">
-          
-       
-          {testimonialsData
-            .slice(currentIndex, currentIndex + 2)
-            .map((testimonial, index) => (
-              <div key={index} className="test-container">
-                <div className="test-star">
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: "5px",
-                      alignItems: "center",
-                    }}
-                  >
-                    {[...Array(Math.floor(testimonial.rating))].map(
-                      (_, starIndex) => (
-                        <FaStar
-                          key={starIndex}
-                          style={{ color: "gold", fontSize: "15px" }}
-                        />
-                      )
-                    )}
-                    {testimonial.rating} / 5.0
+              <button
+                className="test-scroll-button forward"
+                onClick={handleScrollForward}
+              >
+                <FaArrowRight />
+              </button>
+            </div>
+            {testimonialsData
+              .slice(currentIndex, currentIndex + 2)
+              .map((testimonial, index) => (
+                <div key={index} className="test-container">
+                  <div className="test-star">
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "5px",
+                        alignItems: "center",
+                      }}
+                    >
+                      {[...Array(Math.floor(testimonial.rating))].map(
+                        (_, starIndex) => (
+                          <FaStar
+                            key={starIndex}
+                            style={{ color: "gold", fontSize: "15px" }}
+                          />
+                        )
+                      )}
+                      {testimonial.rating} / 5.0
+                    </div>
+                    <br />
+                    <h5>{testimonial.title}</h5>
                   </div>
-                  <br />
-                  <h5>{testimonial.title}</h5>
-                </div>
 
-                <div className="test-para">
-                  <p>{testimonial.text}</p>
-                </div>
+                  <div className="test-para">
+                    <p>{testimonial.text}</p>
+                  </div>
 
-                <div className="test-third">
-                  <h5>{testimonial.name}</h5>
-                  <p>{testimonial.role}</p>
+                  <div className="test-third">
+                    <h5>{testimonial.name}</h5>
+                    <p>{testimonial.role}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
-      </div>
       </div>
     </div>
+
+    <CityTestimonial></CityTestimonial>
+    </>
   );
 };
 
