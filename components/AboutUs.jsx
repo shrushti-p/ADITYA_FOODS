@@ -12,7 +12,8 @@ const AboutUs = () => {
       <header className="about-us-header">
         <h1>About Us</h1>
         <p><a href="/" className="footer-links">Home</a> &gt; About Us</p>
-        
+        <img src="images/garlic.png" alt="Floating garlic" className="floating-burger1" />
+        <img src="images/ginger.png" alt="Floating ginger" className="floating-burger2" />
     
       </header>
 

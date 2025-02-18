@@ -39,6 +39,9 @@ const StatsSection = () => {
       <div className="stats-row">
         <StatItem title="Cities Reached" targetNumber={28} suffix="+" />
       </div>
+      <img src="images/greenpeas.png" alt="Floating greenpeas" className="floating-burger" />
+      <img src="images/mango.png" alt="Floating jamun" className="floating-burger3" />
+      <img src="images/panner.png" alt="Floating custerdapple" className="floating-burger4" />
     </div>
   );
 };
