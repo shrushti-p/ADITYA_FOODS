@@ -56,74 +56,77 @@ const CityTestimonial = () => {
 
   const handleScrollBackward = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0
-        ? testimonialsData.length - 2
-        : prevIndex - 2
+      prevIndex === 0 ? testimonialsData.length - 2 : prevIndex - 2
     );
   };
 
   return (
     <div className={`city-outer ${isMobile ? "mobile-view" : ""}`}>
-      <h2 className="city-heading">Testimonials of Clients From Different Cities</h2>
-        <img src="images/city_image.png" alt="image" className="city-image"/>
+      <h2 className="city-heading">
+        Testimonials of Clients From Different Cities
+      </h2>
+      <img src="images/city_image.png" alt="image" className="city-image" />
 
       <div className="city-right">
-    <div className="Wrap">
-        <div className="city-container-wrapper">
-          
-        <div className="city-arrows">
-          <button
-            className="city-scroll-button backward"
-            onClick={handleScrollBackward}
-          >
-            <FaArrowLeft />
-          </button>
+        <div className="Wrap">
+          <div className="city-container-wrapper">
+            <div className="city-arrows">
+              <button
+                className="city-scroll-button backward"
+                onClick={handleScrollBackward}
+              >
+                <FaArrowLeft />
+              </button>
 
-          <button
-            className="city-scroll-button forward"
-            onClick={handleScrollForward}
-          >
-            <FaArrowRight />
-          </button>
-        </div>
-          {testimonialsData
-            .slice(currentIndex, currentIndex + 2)
-            .map((testimonial, index) => (
-              <div key={index} className="city-container">
-                <div className="city-star">
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: "5px",
-                      alignItems: "center",
-                    }}
-                  >
-                    {[...Array(Math.floor(testimonial.rating))].map(
-                      (_, starIndex) => (
-                        <FaStar
-                          key={starIndex}
-                          style={{ color: "gold", fontSize: "15px" }}
-                        />
-                      )
-                    )}
-                    {testimonial.rating} / 5.0
+              <button
+                className="city-scroll-button forward"
+                onClick={handleScrollForward}
+              >
+                <FaArrowRight />
+              </button>
+            </div>
+            {testimonialsData
+              .slice(currentIndex, currentIndex + 2)
+              .map((testimonial, index) => (
+                <div key={index} className="city-container">
+                  <div className="city-star">
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "5px",
+                        alignItems: "center",
+                      }}
+                    >
+                      {[...Array(Math.floor(testimonial.rating))].map(
+                        (_, starIndex) => (
+                          <FaStar
+                            key={starIndex}
+                            style={{ color: "gold", fontSize: "15px" }}
+                          />
+                        )
+                      )}
+                      {testimonial.rating} / 5.0
+                    </div>
+                    <br />
+                    <h5 className="city-container-heading">
+                      {testimonial.title}
+                    </h5>
                   </div>
-                  <br />
-                  <h5 className="city-container-heading">{testimonial.title}</h5>
-                </div>
 
-                <div className="city-para">
-                  <p>{testimonial.text}</p>
-                </div>
+                  <div className="city-para">
+                    <p>{testimonial.text}</p>
+                  </div>
 
-                <div className="city-third">
-                  <h5 className="city-container-heading">{testimonial.name}</h5>
-                  <p>{testimonial.role}</p>
+                  <div className="city-third">
+                    <h5 className="city-container-heading">
+                      {testimonial.name}
+                    </h5>
+                    <p>{testimonial.role}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
- </div>
       </div>
     </div>
   );

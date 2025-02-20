@@ -3,13 +3,13 @@ import { SlArrowRight } from "react-icons/sl";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "./Testimonials.css";
 import { useState, useEffect } from "react";
-import CityTestimonial from "./CityTestimonial";
+import CityTestimonial from "./CityTestimonial"
 
 const testimonialsData = [
   {
     rating: 4.5,
     title: "Excellent Service",
-    text: "These super foods are packed with vital nutrients, including vitamins and minerals that can help keep you healthy. Plus they are easy to enjoy-just add water and let the magic happen!",
+    text: "These super foods are packed with vital nutrients, including vitamins and minerals that can help keep you healthy. Plus they are easy to enjoy—just add water and let the magic happen!",
     name: "Bridget Cosmus",
     role: "Client",
   },
@@ -38,16 +38,6 @@ const testimonialsData = [
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 728);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleScrollForward = () => {
     setCurrentIndex((prevIndex) =>
@@ -63,85 +53,52 @@ const Testimonials = () => {
 
   return (
     <>
-    <div className={`test-outer ${isMobile ? "mobile-view" : ""}`}>
+    <div className="testimonials-section">
+      {/* Left Side */}
       <div className="test-left">
-        <h2 className="test-head-testimonial">Testimonials</h2>
-        <img
-          className="test-background"
-          src="/images/Background.jpg"
-          alt="Background"
-        />
-        <div className="test-par">
-          What Our
-          <br />
-          Customer's Say?
-        </div>
-        <button type="button" className="btn btn-danger test-btn">
+        <h2 style={{fontSize:50}}className="test-heading">Testimonials</h2>
+        <img src="images/city_image.png" alt="image" className="testimonial-image" />
+        <p className="test-para" style={{fontSize:40}}>What Our <br /> Customer’s Say?</p>
+        <button className="read-all-btn">
           Read All <SlArrowRight />
         </button>
       </div>
 
+      {/* Right Side - Testimonials Slider */}
       <div className="test-right">
-        <div className="Wrap">
-          <div className="test-container-wrapper">
-            <div className="test-arrows">
-              <button
-                className="test-scroll-button backward"
-                onClick={handleScrollBackward}
-              >
-                <FaArrowLeft />
-              </button>
+        <button className="scroll-btn left" onClick={handleScrollBackward}>
+          <FaArrowLeft />
+        </button>
 
-              <button
-                className="test-scroll-button forward"
-                onClick={handleScrollForward}
-              >
-                <FaArrowRight />
-              </button>
-            </div>
-            {testimonialsData
-              .slice(currentIndex, currentIndex + 2)
-              .map((testimonial, index) => (
-                <div key={index} className="test-container">
-                  <div className="test-star">
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "5px",
-                        alignItems: "center",
-                      }}
-                    >
-                      {[...Array(Math.floor(testimonial.rating))].map(
-                        (_, starIndex) => (
-                          <FaStar
-                            key={starIndex}
-                            style={{ color: "gold", fontSize: "15px" }}
-                          />
-                        )
-                      )}
-                      {testimonial.rating} / 5.0
-                    </div>
-                    <br />
-                    <h5>{testimonial.title}</h5>
-                  </div>
-
-                  <div className="test-para">
-                    <p>{testimonial.text}</p>
-                  </div>
-
-                  <div className="test-third">
-                    <h5>{testimonial.name}</h5>
-                    <p>{testimonial.role}</p>
-                  </div>
+        <div className="testimonials-container">
+          {testimonialsData
+            .slice(currentIndex, currentIndex + 2)
+            .map((testimonial, index) => (
+              <div key={index} className="testimonial-card">
+                <div className="rating">
+                  {[...Array(Math.floor(testimonial.rating))].map((_, starIndex) => (
+                    <FaStar key={starIndex} className="star-icon" />
+                  ))}
+                  {testimonial.rating} / 5.0
                 </div>
-              ))}
-          </div>
+                <h4 className="test-title">{testimonial.title}</h4>
+                <p className="testimonial-text">{testimonial.text}</p>
+                <div className="testimonial-footer">
+                  <h5 style={{fontStyle:"oblique"}}>{testimonial.name}</h5>
+                  <p>{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
         </div>
+
+        <button className="scroll-btn right" onClick={handleScrollForward}>
+          <FaArrowRight />
+        </button>
       </div>
     </div>
-
-    <CityTestimonial></CityTestimonial>
+     <CityTestimonial></CityTestimonial>
     </>
+
   );
 };
 
