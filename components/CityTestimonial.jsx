@@ -62,11 +62,23 @@ const CityTestimonial = () => {
 
   return (
     <div className={`city-outer ${isMobile ? "mobile-view" : ""}`}>
-      <h2 className="city-heading">
-        Testimonials of Clients From Different Cities
-      </h2>
-      <img src="images/city_image.png" alt="image" className="city-image" />
+ 
 
+<div className="city-heading">
+        <h2 className="section_title"> Testimonials of Clients From Different Cities</h2>    
+       
+        <img 
+        src="images/section_delimiter.png" alt="img" class="section_devider"/>
+         
+        </div>
+
+    
+     
+          
+
+
+            
+      
       <div className="city-right">
         <div className="Wrap">
           <div className="city-container-wrapper">

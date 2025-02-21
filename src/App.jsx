@@ -17,7 +17,7 @@ import Categories from "../components/Categories";
 import ProductDetails from "../components/ProductDetails";
 import HeroProducts from "../components/HeroProducts";
 import Testimonials from '../components/Testimonials';
-
+import CityTestimonial from "../components/CityTestimonial"; 
 
 
 function App() {
@@ -40,6 +40,7 @@ function App() {
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/citytestimonial" element={<CityTestimonial />} />
       </Routes>
     </Router>
 

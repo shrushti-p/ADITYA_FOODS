@@ -2,8 +2,10 @@ import { FaStar } from "react-icons/fa";
 import { SlArrowRight } from "react-icons/sl";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "./Testimonials.css";
+import { Link } from "react-router-dom"; 
 import { useState, useEffect } from "react";
-import CityTestimonial from "./CityTestimonial"
+import Footer from "./Footer";
+// import CityTestimonial from "./CityTestimonial"
 
 const testimonialsData = [
   {
@@ -57,11 +59,13 @@ const Testimonials = () => {
       {/* Left Side */}
       <div className="test-left">
         <h2 style={{fontSize:50}}className="test-heading">Testimonials</h2>
-        <img src="images/city_image.png" alt="image" className="testimonial-image" />
+        <img 
+          src="images/section_delimiter.png" alt="img" class="section_devider"/>
         <p className="test-para" style={{fontSize:40}}>What Our <br /> Customer’s Say?</p>
-        <button className="read-all-btn">
-          Read All <SlArrowRight />
-        </button>
+        
+        <Link to="/CityTestimonial" className="read-all-btn">
+        Read All <SlArrowRight />
+      </Link>
       </div>
 
       {/* Right Side - Testimonials Slider */}
@@ -96,7 +100,7 @@ const Testimonials = () => {
         </button>
       </div>
     </div>
-     <CityTestimonial></CityTestimonial>
+    <Footer></Footer>
     </>
 
   );

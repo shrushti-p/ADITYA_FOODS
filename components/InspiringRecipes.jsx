@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./InspiringRecipes.css";
+import Footer from "./Footer";
 
 const products = [
   {
@@ -125,6 +126,7 @@ const InspiringRecipes = () => {
           </div>
         </div>
       ))}
+      <Footer></Footer>
     </div>
   );
 };

@@ -65,7 +65,10 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  
+  
 } 
   
   .contact-content {
@@ -124,6 +127,10 @@ img {
   
   .submit:hover {
     background: #e68900;
+  }
+
+  .get-in-touch{
+    padding: 30px;
   }
   
   /* Responsive Styles */

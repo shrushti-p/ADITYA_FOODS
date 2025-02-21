@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Footer";
 import ProductDetails from "./ProductDetails";
 import "./Categories.css";
 
@@ -40,6 +41,7 @@ const menuItems = [
 
 
 const Categories = () => {
+
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -48,6 +50,7 @@ const Categories = () => {
     : menuItems.filter((item) => item.categoryId === selectedCategory);
 
   return (
+    <>
     <div className="categories-container">
 
       <h1 className="title">Categories</h1>
@@ -74,13 +77,17 @@ const Categories = () => {
               <h3>{item.name} <span className="price">Rs. {item.price.toFixed(2)}</span></h3>
               <p>{item.description}</p>
             </div>
+     
           </div>
         ))}
       </div>
 
       {/* Product Details Modal */}
       {selectedProduct && <ProductDetails product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
+      
     </div>
+    <Footer></Footer>
+    </>
   );
 };
 

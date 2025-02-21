@@ -5,6 +5,8 @@ import "./AboutUs.css";
 import {  FaSmile, FaLeaf } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { GiFruitBowl } from "react-icons/gi";
+import Testimonials from "./Testimonials";
+
 const AboutUs = () => {
   return (
     <div className="about-us-page">
@@ -75,8 +77,9 @@ const AboutUs = () => {
             alt="Aditya Foods's"
           />
         </div>
-        
+       
       </section>
+   
 
       {/* Why Choose Us Section */}
       <section className="why-choose-us">
@@ -110,7 +113,11 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      <Testimonials></Testimonials> 
+ 
+      
     </div>
+    
   );
 };
 

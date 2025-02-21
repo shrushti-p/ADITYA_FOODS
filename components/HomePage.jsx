@@ -11,7 +11,7 @@ import StatsSection from './StatsSection';
 import HowToOrder from './HowToOrder';
 import Categories from "./Categories";
 import HeroProducts from "./HeroProducts";
-import Testimonials from "./Testimonials";
+
 
 const products = [
   { id: 1, name: "Category 1", image: "images/oil.png" },
@@ -98,7 +98,7 @@ const HomePage = () => {
     <HeroProducts></HeroProducts>
     <StatsSection></StatsSection>
     <HowToOrder></HowToOrder>
-    {<Testimonials></Testimonials> }
+ 
     <Footer></Footer>
    
 

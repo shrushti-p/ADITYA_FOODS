@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactUs.css";
+import Footer from './Footer';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const ContactUs = () => {
@@ -69,7 +70,9 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
+       
   );
 };
 
