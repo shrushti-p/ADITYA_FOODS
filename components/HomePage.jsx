@@ -14,14 +14,14 @@ import HeroProducts from "./HeroProducts";
 
 
 const products = [
-  { id: 1, name: "Category 1", image: "images/oil.png" },
-  { id: 2, name: "Category 2", image: "images/paste.png" },
-  { id: 3, name: "Category 3", image: "images/candy.png" },
-  { id: 4, name: "Category 4", image: "images/pulp.png" },
-  { id: 5, name: "Category 5", image: "images/peas.png" },
-  { id: 1, name: "Category 1", image: "images/oil.png" },
-  { id: 2, name: "Category 2", image: "images/paste.png" },
-  { id: 3, name: "Category 3", image: "images/candy.png" },
+  { id: 1, name: "Oils", image: "images/oil.png" },
+  { id: 2, name: "Pastes & Blends", image: "images/paste.png" },
+  { id: 3, name: "Candies", image: "images/cat_candy.png" },
+  { id: 4, name: "Fruit Pulps", image: "images/pulp.png" },
+  { id: 5, name: "Green Peas", image: "images/cat_peas.png" },
+  { id: 1, name: "Authentic Chutneys", image: "images/cat_chutney2.png" },
+  { id: 2, name: "Dairy Delights", image: "images/cat_dairy4.png" },
+  { id: 3, name: "catego", image: "images/candy.png" },
   { id: 4, name: "Category 4", image: "images/pulp.png" },
   { id: 5, name: "Category 5", image: "images/peas.png" },
 ];
