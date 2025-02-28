@@ -7,7 +7,7 @@
 
 /* Footer Container */
 .footer {
-  background-color: #dcf4ff;
+  background-color: #027033;
 
   text-align: center;
 }
@@ -16,7 +16,7 @@
 .horizontal-line {
   width: 100%;
   height: 1px;
-  background-color: #dcf4ff;
+  background-color: #0c545500;
 
 }
 
@@ -36,7 +36,7 @@
   flex: 1;
   min-width: 200px;
 }
-
+/* 0e8081 */
 /* Social Section - Align to the Left */
 .footer-section.social-section {
   text-align: left;
@@ -63,7 +63,7 @@
 
 .footer-section h3 {
   font-size: 1.25rem;
-  color: #F1002D;
+  color: #f8b300;
   margin-bottom: 1rem;
 }
 
@@ -73,6 +73,7 @@
 }
 
 .footer-section ul li {
+  color: #ffffff;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -81,13 +82,13 @@
 /* Social Icons */
 .social-icon {
   margin-right: 10px;
-  color: #F1002D;
+  color: #f8b300;
 }
 
 /* Contact Icons */
 .contact-icon {
   margin-right: 10px;
-  color: #F1002D;
+  color: #f8b300;
 }
 
 /* Links Section - Align Links to the Right */
@@ -96,21 +97,22 @@
 }
 
 .footer-section ul li a {
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #F1002D;
+  color: #f8b300;
 }
 
 /* Copyright Section */
 .copyright {
+  color: white;
   text-align: center;
   padding: 7px 0;
   font-size: 0.9rem;
-  background-color: #38ADDF;
+  background-color: #004109;
 }
 
 /* Responsive Design */

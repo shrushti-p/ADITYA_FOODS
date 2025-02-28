@@ -2,7 +2,7 @@
 
 .navbar {
     width: 100%;
-    background-image: linear-gradient(#87d9ff, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(#027033, #00733400);
   }
   
   .navbar-top {
@@ -17,7 +17,7 @@
     width: 140px;
     height: 100PX;
     /* border: #000000 solid; */
-    background-image: url("/images/logo.png");
+    background-image: url("/images/logo1.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -96,12 +96,17 @@
     padding: 8px 16px;
     cursor: pointer;
     border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
   
   .nav-item:hover {
-    background-color: #F1002D;
+    background-color: #ed2124;
     color: white;
+  }
+
+  .nav-item.selected{
+    color: #ed2124;
+    /* color: white; */
   }
   
   @media (max-width: 768px) {

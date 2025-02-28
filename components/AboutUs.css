@@ -1,21 +1,21 @@
-
-
   .about-us-page {
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
    
   }
-  
+  .title_bottom{
+    margin-bottom: 15px;
+  }
   /* Header Section */
   .about-us-header {
     text-align: center;
-    padding: 40px 0;
+    padding: 40px 0 0 0;
   }
   
   .about-us-header h1 {
     font-size: 40px; 
-    color: #f1002d;
+    color: #333;
     font-weight: bold;
   }
   
@@ -25,8 +25,7 @@
   }
   
   /* Story Section */
-  
-   .story-section {
+.story-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,10 +40,11 @@
     font-family: 'Rubik', sans-serif;
     line-height: 56px;
     margin-top: 30px;
+    color: #027033;
 }
 
 .sub_title {
-    color: #f7b035;
+    color: #027033;
     font-weight: 700;
     text-transform: capitalize;
     font-size: 22px;
@@ -108,7 +108,7 @@ img {
 
   /* Why Choose Us Section */
   .why-choose-us {
-    background: #dcf4ff;
+    background: #00ff2a1e;
     padding: 40px;
     text-align: center;
     border-radius: 10px;
@@ -167,13 +167,14 @@ img {
   
   .team-member h3 {
     font-size: 1.5rem;
-    color: #f7b035;
+    color: #ed2124; /* e2211a */
     margin-bottom: 0.5rem;
   }
   
   .team-member p {
     font-size: 1rem;
     color: #555;
+    margin-bottom: 0;
   }
 
   @media (max-width: 480px) {
@@ -207,29 +208,29 @@ img {
     }
 
     
-    .floating-burger1 , .floating-burger2  {
+    .floating-ginger , .floating-garlic  {
       display: none;
   }
   }
 
 
-  .floating-burger1 {
+  .floating-garlic {
     width: 150px;
     height: auto;
     position: absolute;
-    bottom: 45%;
+    top: 20%;
     left: 10%;
     transform: translateX(-50%);
     animation: floatBurger 3s ease-in-out infinite;
   }
   
   
-  .floating-burger2 {
-    width: 150px;
+  .floating-ginger {
+    width: 200px;
     height: auto;
     position: absolute;
-    bottom: 50%;
-    left: 80%;
+    top: 380%;
+    left: 90%;
     transform: translateX(-50%);
     animation: floatBurger 3s ease-in-out infinite;
   }

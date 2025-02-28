@@ -68,7 +68,7 @@ const CityTestimonial = () => {
         <h2 className="section_title"> Testimonials of Clients From Different Cities</h2>    
        
         <img 
-        src="images/section_delimiter.png" alt="img" class="section_devider"/>
+        src="images/section_delimiter_1.png" alt="img" class="section_devider"/>
          
         </div>
 

@@ -40,7 +40,7 @@ const ContactUs = () => {
       <h2 className="section_title">Get In Touch </h2>    
         <h3 className="sub_title">Send Us Messages</h3>    
         <img 
-        src="images/section_delimiter.png" alt="img" class="section_devider"/>
+        src="images/section_delimiter_1.png" alt="img" class="section_devider"/>
         <div className="contact-content">
           {/* Google Map */}
           <div className="map-container">

@@ -39,7 +39,7 @@
 .main-title {
   font-size: 3.1rem;
   font-weight: bold;
-  color: #f1002d;
+  color: #ed2124;
   margin-bottom: 1rem;
 
    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -102,8 +102,8 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #dc9e01;
-  background-color: #ffc534;
+  border: 3px solid #f8b300;
+  background-color: #f8c2001b;
   padding: 7px;
   margin-bottom: 0;
 }
@@ -121,7 +121,7 @@
   position: absolute;
   bottom: 60%;
   transform: translateY(50%);
-  background-color: #f1002d;
+  background-color: #027033;
   color: white;
   border: none;
   border-radius: 50%;
@@ -146,7 +146,7 @@
 
 .scroll-forward-button:hover,
 .scroll-backward-button:hover {
-  background-color: #f1002d;
+  background-color: #ed2124;
 }
 
 .forward-icon,

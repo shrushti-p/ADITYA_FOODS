@@ -53,7 +53,9 @@ const Categories = () => {
     <>
     <div className="categories-container">
 
-      <h1 className="title">Categories</h1>
+      <h1 className="title">Categories <br /><img src="images/section_delimiter_1.png" alt="img" class="title_bottom"/><img src="images/penut.png" alt="Floating custerdapple" className="floating-peanut" /></h1>
+      
+      
 
       {/* Categories Navigation */}
       <nav className="category-nav">

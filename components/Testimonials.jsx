@@ -59,8 +59,7 @@ const Testimonials = () => {
       {/* Left Side */}
       <div className="test-left">
         <h2 style={{fontSize:50}}className="test-heading">Testimonials</h2>
-        <img 
-          src="images/section_delimiter.png" alt="img" class="section_devider"/>
+        <img src="images/section_delimiter_1.png" alt="img" class="section_devider"/>
         <p className="test-para" style={{fontSize:40}}>What Our <br /> Customer’s Say?</p>
         
         <Link to="/CityTestimonial" className="read-all-btn">

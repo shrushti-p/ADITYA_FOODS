@@ -5,14 +5,15 @@ import { FiSearch } from "react-icons/fi";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const [selectedCategory, setSelectedCategory] = useState(0);
   const [search, setSearch] = useState("");
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Categories", path: "/categories" },
-    { name: "Recipes", path: "/recipes" },
-    { name: "Testimonials", path: "/testimonials" },
-    { name: "About Us", path: "/about" },
+    { id: 1, name: "Home", path: "/" },
+    { id: 2, name: "Categories", path: "/categories" },
+    { id: 3, name: "Recipes", path: "/recipes" },
+    { id: 4, name: "Testimonials", path: "/testimonials" },
+    { id: 5, name: "About Us", path: "/about" },
   ];
 
   return (
@@ -41,7 +42,7 @@ export default function Navbar() {
       <div className="nav-bar">
         <ul className="nav-list">
           {navItems.map((item) => (
-            <li key={item.name} className="nav-item">
+            <li key={item.name} className={`nav-item ${selectedCategory === item.id ? "selected" : ""}`} onClick={() => setSelectedCategory(item.id)}>
               <Link to={item.path} className="nav-link">{item.name}</Link>
             </li>
           ))}

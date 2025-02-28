@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(#38addf,white, white, white);
+    background: linear-gradient(#086629,white, white, white);
     padding: 20px;
     font-family: Arial, sans-serif;
     width: 70%;
@@ -34,7 +34,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #f1002d;
+  background: #bb2322;
   /* color: #F1002D; */
   border: none;
   font-size: 20px;
@@ -89,7 +89,7 @@
   }
   
   .bestseller {
-    color: green;
+    color: gold;
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 0;
@@ -161,12 +161,12 @@
   }
   
   .add-to-cart {
-    background: #003366;
+    background: #01520c;
     color: white;
   }
   
   .buy-now {
-    background: #f5a623;
+    background: #f8b300;
     color: white;
   }
 
@@ -191,8 +191,8 @@
   }
   
   .tab.active {
-    color: #f1002d;
-    border-bottom: 2px solid #f1002d;
+    color: #8d0f10;
+    border-bottom: 2px solid #8d0f10;
   }
   
   .additional-info {

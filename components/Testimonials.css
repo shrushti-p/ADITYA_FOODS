@@ -37,7 +37,7 @@
 }
 
 .read-all-btn {
-  background-color: #e2211a;
+  background-color: #ed2124;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -49,6 +49,7 @@
   align-items: center;
   gap: 5px;
   margin-top: 30px;
+  width: max-content;
 }
 
 .read-all-btn:hover {
@@ -66,7 +67,7 @@
 
 /* Arrows */
 .scroll-btn {
-  background-color: #e3342f;
+  background-color: #ed2124;
   color: white;
   border: none;
   border-radius: 50%;
@@ -80,7 +81,7 @@
 }
 
 .scroll-btn:hover {
-  background-color: #cc2a2a;
+  background-color: #ed2124;
 }
 
 /* Testimonials Container */

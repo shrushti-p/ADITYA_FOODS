@@ -11,7 +11,7 @@
   
   .contact-header h2 {
     font-size: 40px; 
-    color: #f1002d;
+    color: #ed2124;
     font-weight: bold;
   }
   
@@ -37,7 +37,7 @@
   
   .icon {
     font-size: 30px;
-    color: #ff9800;
+    color: #f8b300;
     margin-bottom: 20px;
   }
 
@@ -50,7 +50,7 @@
 }
 
 .sub_title {
-  color: #f7b035;
+  color: #f8b300;
   font-weight: 700;
   text-transform: capitalize;
   font-size: 22px;
@@ -116,7 +116,7 @@ img {
   }
   
   .submit {
-    background: #ff9800;
+    background: #f8b300;
     color: white;
     border: none;
     padding: 10px;
@@ -126,7 +126,7 @@ img {
   }
   
   .submit:hover {
-    background: #e68900;
+    background: #f8b300;
   }
 
   .get-in-touch{

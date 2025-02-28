@@ -95,7 +95,7 @@ const InspiringRecipes = () => {
   return (
     <div className="recipe-container">
       <div className="recipe-header">
-        <h1>Inspiring Recipes</h1>
+      <h1 className="title">Inspiring Recipes<br /><img src="images/section_delimiter_1.png" alt="img" class="title_bottom"/></h1>
         <p>
           Explore our collection of inspiring recipes that showcase the versatility of our products.
           From classic comfort foods to innovative culinary creations, we invite you to discover 

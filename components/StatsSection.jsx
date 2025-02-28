@@ -31,6 +31,7 @@ const StatsSection = () => {
     <div className="stats-container">
       <div className="stats-row">
         <StatItem title="Happy Clients" targetNumber={1500} suffix="+" />
+      <img src="images/greenpeas.png" alt="Floating greenpeas" className="floating-burger" />
       </div>
       <div className="stats-row">
         <StatItem title="Activate Products" targetNumber={15} suffix="+" />
@@ -38,10 +39,8 @@ const StatsSection = () => {
       </div>
       <div className="stats-row">
         <StatItem title="Cities Reached" targetNumber={28} suffix="+" />
-      </div>
-      <img src="images/greenpeas.png" alt="Floating greenpeas" className="floating-burger" />
       <img src="images/mango.png" alt="Floating jamun" className="floating-burger3" />
-      <img src="images/panner.png" alt="Floating custerdapple" className="floating-burger4" />
+      </div>
     </div>
   );
 };

@@ -1,101 +1,92 @@
-/* General Styling */
-.heading {
-   
+/* Full-Screen Snap Section */
+.hero-page {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  padding-top: 20px;
+  background-color: #027033;
+  overflow-x: hidden;
+}
 
+.section_title{
+  color: white;
+}
+.city-heading{
+  position: relative;
+}
 
-    margin: 20px auto 20px auto;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 45px;
-    text-align: center;
-  /* 
-    font-size: 2.5rem; */
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Container for Products */
-  .products-container-hero {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Ensures 3 products per row */
-    gap: 40px;
-    padding: 20px;
-    justify-content: center;
-  }
-  
-  /* Individual Product Card */
-  .product {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(#ffffff 63%, #dcf4ff 37%);
-    box-shadow: 
-    /* inset 0 0 20px 10px #dcf4ff,  */
-    0 6px 12px rgba(0, 0, 0, 0.15); /* Outer shadow (black) */
-  }
-  
-  .product:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Product Image */
+.floating-burger4 {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  left: 80%;
+  bottom: 5px;
+  animation: floatBurger 3s ease-in-out infinite;
+}
+/* Product Animation */
+.product {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background-color: none;
+  padding: 20px;
+  /* border-radius: 8px; */
+  will-change: transform;
+  margin-bottom: 0px;
+  color: white;
+  width: 100%;
+}
+
+.product.from-left {
+  transform: translateX(-100px);
+  background: linear-gradient(to left, #027033, #024621);
+}
+
+.product.from-right {
+  transform: translateX(100px);
+  text-align: right;
+  background: linear-gradient(to right, #027033, #024621);
+}
+
+.product.scroll-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.product.scroll-out.from-left {
+  transform: translateX(-100px);
+}
+
+.product.scroll-out.from-right {
+  transform: translateX(100px);
+}
+
+/* Flexbox layout for image and text */
+.prod-information {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-description{
+  max-width: 750px;
+  /* text-align: justify; */
+}
+
+.align-left {
+  flex-direction: row;
+}
+
+.align-right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Image styling */
 .product-image {
-    width: 50%;  /* Ensures image takes full width of its container */
-    aspect-ratio: 189.1 / 283.65; /* Maintains the specified aspect ratio */
-    object-fit: cover; /* Ensures the image covers the space properly */
-    border-radius: 8px;
-  }
-
-  .prod-information{
-    /* background-color: rgb(54, 161, 255); */
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px;
-    padding-bottom: 0;
-  }
-  
-  
-  /* Product Name */
-  .product .h3 {
-    /* font-size: 1.2rem; */
-    margin: 10px 0;
-    color: #222;
-  }
-  
-  /* Price Styling */
-  .product-price {
-    font-size: 1.1rem;
-    color: #f1002d;
-    font-weight: bold;
-  }
-  
-  /* Product Description */
-  .product-description {
-    font-size: 0.95rem;
-    color: #444;
-    line-height: 1.4;
-    /* margin-top: 10px; */
-    text-align: left;
-    padding: 0 10px;
-    width: 100%;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 900px) {
-    .products-container-hero {
-      grid-template-columns: repeat(2, 1fr); /* 2 products per row for smaller screens */
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .products-container-hero {
-      grid-template-columns: repeat(1, 1fr); /* 1 product per row for very small screens */
-    }
-  }
-  
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
