@@ -40,11 +40,11 @@
     font-family: 'Rubik', sans-serif;
     line-height: 56px;
     margin-top: 30px;
-    color: #027033;
+    color: #f8b300;
 }
 
 .sub_title {
-    color: #027033;
+    color: #f8b300;
     font-weight: 700;
     text-transform: capitalize;
     font-size: 22px;
@@ -108,7 +108,7 @@ img {
 
   /* Why Choose Us Section */
   .why-choose-us {
-    background: #00ff2a1e;
+    background: #00b3ef31;
     padding: 40px;
     text-align: center;
     border-radius: 10px;
@@ -208,13 +208,13 @@ img {
     }
 
     
-    .floating-ginger , .floating-garlic  {
+    .floating-burger1 , .floating-burger2  {
       display: none;
   }
   }
 
 
-  .floating-garlic {
+  .floating-burger1 {
     width: 150px;
     height: auto;
     position: absolute;
@@ -225,12 +225,12 @@ img {
   }
   
   
-  .floating-ginger {
-    width: 200px;
+  .floating-burger2 {
+    width: 150px;
     height: auto;
     position: absolute;
-    top: 380%;
-    left: 90%;
+    bottom: 50%;
+    left: 85%;
     transform: translateX(-50%);
     animation: floatBurger 3s ease-in-out infinite;
   }

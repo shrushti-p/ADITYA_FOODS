@@ -17,7 +17,8 @@ import Categories from "../components/Categories";
 import ProductDetails from "../components/ProductDetails";
 import HeroProducts from "../components/HeroProducts";
 import Testimonials from '../components/Testimonials';
-import CityTestimonial from "../components/CityTestimonial"; 
+import CityTestimonial from "../components/CityTestimonial";
+import Cart from "../components/Cart";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/citytestimonial" element={<CityTestimonial />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
 

@@ -1,0 +1,121 @@
+/* Cart.css */
+.cart-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .cart-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .cart-items {
+    width: 65%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead td{
+    background-color: #fff;
+    text-align: left;
+    color: #db0909;
+    height: 50px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  thead th, tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .product-info img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-controls button {
+    padding: 5px 10px;
+    border: none;
+    background: #f8b300;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .order-summary {
+    width: 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .voucher {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .voucher input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .voucher button {
+    padding: 8px 12px;
+    background: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background: #f8b300;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  

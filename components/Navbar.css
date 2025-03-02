@@ -2,7 +2,7 @@
 
 .navbar {
     width: 100%;
-    background-image: linear-gradient(#027033, #00733400);
+    background-image: linear-gradient(#00b4ef, #00733400);/*00b4ef*/
   }
   
   .navbar-top {
@@ -58,9 +58,13 @@
   .iconss {
     font-size: 30px;
     cursor: pointer;
-    /* color: #F1002D; */
+    color: #000000;
+    transition: ease 0.3s;
   }
   
+  .iconss:hover {
+    transform: scale(1.1);
+  }
   .mobile-search {
     display: none;
   }
@@ -106,7 +110,10 @@
 
   .nav-item.selected{
     color: #ed2124;
-    /* color: white; */
+  }
+  
+  .nav-item.selected:hover{
+    color: #ffffff;
   }
   
   @media (max-width: 768px) {

@@ -34,7 +34,9 @@ export default function Navbar() {
         </div>
         <div className="home-icon">
           <FaUser className="iconss" />
-          <FaShoppingCart className="iconss" />
+          <Link to="/cart">
+            <FaShoppingCart className="iconss" />
+          </Link>
         </div>
       </div>
 

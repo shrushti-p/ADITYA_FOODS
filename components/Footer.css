@@ -7,8 +7,7 @@
 
 /* Footer Container */
 .footer {
-  background-color: #027033;
-
+  background-color: #00b3ef74;
   text-align: center;
 }
 
@@ -63,7 +62,7 @@
 
 .footer-section h3 {
   font-size: 1.25rem;
-  color: #f8b300;
+  color: #ed2124;
   margin-bottom: 1rem;
 }
 
@@ -73,7 +72,7 @@
 }
 
 .footer-section ul li {
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -82,13 +81,13 @@
 /* Social Icons */
 .social-icon {
   margin-right: 10px;
-  color: #f8b300;
+  color: #ed2124;
 }
 
 /* Contact Icons */
 .contact-icon {
   margin-right: 10px;
-  color: #f8b300;
+  color: #ed2124;
 }
 
 /* Links Section - Align Links to the Right */
@@ -97,22 +96,22 @@
 }
 
 .footer-section ul li a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #f8b300;
+  color: #ed2124;
 }
 
 /* Copyright Section */
 .copyright {
-  color: white;
+  color: black;
   text-align: center;
   padding: 7px 0;
   font-size: 0.9rem;
-  background-color: #004109;
+  background-color: #00b4ef;
 }
 
 /* Responsive Design */

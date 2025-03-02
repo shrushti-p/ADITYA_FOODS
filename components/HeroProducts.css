@@ -6,12 +6,12 @@
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   padding-top: 20px;
-  background-color: #027033;
+  background-color: #00b3ef74;
   overflow-x: hidden;
 }
 
 .section_title{
-  color: white;
+  color: black;
 }
 .city-heading{
   position: relative;
@@ -25,6 +25,11 @@
   bottom: 5px;
   animation: floatBurger 3s ease-in-out infinite;
 }
+
+.products-container-hero{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 /* Product Animation */
 .product {
   opacity: 0;
@@ -34,19 +39,20 @@
   /* border-radius: 8px; */
   will-change: transform;
   margin-bottom: 0px;
-  color: white;
-  width: 100%;
+  /* width: 50%; */
 }
 
 .product.from-left {
   transform: translateX(-100px);
-  background: linear-gradient(to left, #027033, #024621);
+  background: linear-gradient(to left, #46d1ff00, #cef3ff);
+  height: fit-content;
 }
 
 .product.from-right {
+  margin-top: 100px;
   transform: translateX(100px);
   text-align: right;
-  background: linear-gradient(to right, #027033, #024621);
+  background: linear-gradient(to right, #46d1ff00, #cef3ff);
 }
 
 .product.scroll-active {
@@ -71,7 +77,6 @@
 
 .product-description{
   max-width: 750px;
-  /* text-align: justify; */
 }
 
 .align-left {
@@ -89,4 +94,13 @@
   height: auto;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.prod-name .h3{
+  color: #ed2124;
+  font-weight: bold;
+}
+
+.product-price{
+  font-weight: bold;
 }

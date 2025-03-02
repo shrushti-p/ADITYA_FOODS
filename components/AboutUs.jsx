@@ -16,8 +16,8 @@ const AboutUs = () => {
       <h1 className="title">About Us<br />
         <img src="images/section_delimiter_1.png" alt="img" class="title_bottom"/>
         <p><a href="/" className="footer-links">Home</a> &gt; About Us</p>
-        <img src="images/ginger.png" alt="Floating ginger" className="floating-ginger" />
-        <img src="images/garlic.png" alt="Floating garlic" className="floating-garlic" />
+        <img src="images/ginger.png" alt="Floating burger1" className="floating-burger2" />
+        <img src="images/garlic.png" alt="Floating burger2" className="floating-burger1" />
       </h1>
         
         
@@ -58,7 +58,7 @@ const AboutUs = () => {
       <section className="story-section">
         <div className="text-content">
         <h2 className="section_title">Story About Us</h2>    
-        <h3 className="sub_title">Who we area</h3>    
+        <h3 className="sub_title">Who we are</h3>    
         <img 
         src="images/section_delimiter_1.png" alt="img" class="section_devider"/>
           <p>
@@ -89,30 +89,30 @@ const AboutUs = () => {
       {/* Why Choose Us Section */}
       <section className="why-choose-us">
     
-        <h3 class="sub_title">Why Chosse Us</h3>
+        <h3 class="sub_title">Why Choose Us</h3>
         <img 
         src="images/section_delimiter_1.png" alt="img" class="section_devider"/>
         <div className="choose-cards">
           <div className="choose-card">
-            <GiFruitBowl size={40} color="#027033" />
+            <GiFruitBowl size={40} color="#00b4ef" />
             <h4>100% Organic Ingredients</h4>
             <p>Fresh, natural, and chemical-free products for healthy living.</p>
           </div>
 
           <div className="choose-card">
-            <FaLeaf size={40} color="#027033"/>
+            <FaLeaf size={40} color="#00b4ef"/>
             <h4>Sustainable Sourcing</h4>
             <p>Responsibly sourced raw materials to promote environmental care.</p>
           </div>
 
           <div className="choose-card">
-            <IoMdSettings size={40} color="#027033"/>
+            <IoMdSettings size={40} color="#00b4ef"/>
             <h4>Advanced Production Techniques</h4>
             <p>Modern facilities for hygienic and efficient production.</p>
           </div>
 
           <div className="choose-card">
-            <FaSmile size={40} color="#027033"/>
+            <FaSmile size={40} color="#00b4ef"/>
             <h4>Customer Satisfaction</h4>
             <p>Focused on delivering excellence in taste and service.</p>
           </div>

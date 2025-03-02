@@ -121,7 +121,7 @@
   position: absolute;
   bottom: 60%;
   transform: translateY(50%);
-  background-color: #027033;
+  background-color: #00b4ef;
   color: white;
   border: none;
   border-radius: 50%;
@@ -146,7 +146,7 @@
 
 .scroll-forward-button:hover,
 .scroll-backward-button:hover {
-  background-color: #ed2124;
+  background-color: #0099cb;
 }
 
 .forward-icon,
