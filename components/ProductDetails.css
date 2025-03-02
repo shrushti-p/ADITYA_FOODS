@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(#086629,white, white, white);
+    background: linear-gradient(#00b4ef,white, white, white);
     padding: 20px;
     font-family: Arial, sans-serif;
     width: 70%;
@@ -34,7 +34,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #bb2322;
+  background: #ed2124;
   /* color: #F1002D; */
   border: none;
   font-size: 20px;
@@ -89,7 +89,7 @@
   }
   
   .bestseller {
-    color: gold;
+    color: #086629;
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 0;
@@ -161,7 +161,7 @@
   }
   
   .add-to-cart {
-    background: #01520c;
+    background: #003366;
     color: white;
   }
   
@@ -191,8 +191,8 @@
   }
   
   .tab.active {
-    color: #8d0f10;
-    border-bottom: 2px solid #8d0f10;
+    color: #ed2124;
+    border-bottom: 2px solid #ed2124;
   }
   
   .additional-info {
