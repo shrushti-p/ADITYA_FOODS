@@ -1,13 +1,9 @@
 /* Full-Screen Snap Section */
 .hero-page {
   height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  overflow-y: hidden;
   padding-top: 20px;
   background-color: #00b3ef74;
-  overflow-x: hidden;
 }
 
 .section_title{
@@ -29,6 +25,9 @@
 .products-container-hero{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  overflow-y: scroll;
+  height: 120vh;
+  overflow-x: hidden;
 }
 /* Product Animation */
 .product {
