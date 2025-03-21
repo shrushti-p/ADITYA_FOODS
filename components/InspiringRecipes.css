@@ -1,22 +1,14 @@
 /* General Styles */
 .recipe-container {
-  /* background: linear-gradient(to bottom, #c2e9fb, #fbc2eb); */
-  background-color: none;
- 
   text-align: center;
 }
 
 /* Title */
 .recipe-header h1 {
-
-
-
-  margin: 20px auto 20px auto;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 20px auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 45px;
   text-align: center;
-/* 
-  font-size: 2.5rem; */
   font-weight: bold;
   color: #333;
 }
@@ -28,22 +20,27 @@
   color: #555;
 }
 
+.title_bottom {
+  width: 100px;
+  display: block;
+  margin: 10px auto;
+}
+
 /* Recipe Card */
 .recipe-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: #ffecec; */
   padding: 20px;
   border-radius: 10px;
-
   max-width: 1200px;
-  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
   margin: 20px auto;
   transition: transform 0.3s ease-in-out;
+  background: #fff;
+  /* box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
-/* Image */
+/* Image (Left) */
 .recipe-image img {
   width: 150px;
   height: auto;
@@ -51,35 +48,34 @@
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Recipe Buttons */
-.recipe-box {
+/* Recipe Content (Center) */
+.recipe-content {
   text-align: center;
   flex: 1;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+ 
 }
 
-.recipe-button {
-  background: #ed2124;
-  color: white;
-  border: none;
-  padding: 10px 10px;
-  margin-bottom: 4px;
+.recipe-content h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ed2124;
+  margin-bottom: 8px;
+}
+
+.recipe-content p {
   font-size: 1rem;
-  
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-button {
- 
-  padding: 10px;
- 
+  color: #333;
+  text-align: left;
+  line-height: 1.4;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.recipe-button:hover {
-  background: #ebe8e8;
-}
-
-/* Arrow Button */
+/* Arrow Button (Right) */
 .recipe-arrow {
   background: transparent;
   border: none;
@@ -99,9 +95,14 @@ button {
   .recipe-card {
     flex-direction: column;
     text-align: center;
+    max-width: 90%;
   }
 
   .recipe-image {
     margin-bottom: 10px;
+  }
+
+  .recipe-content {
+    width: 100%;
   }
 }
