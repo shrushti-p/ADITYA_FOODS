@@ -3,7 +3,7 @@ import { SlArrowRight } from "react-icons/sl";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "./CityTestimonial.css";
 import { useState, useEffect } from "react";
-
+import Footer from "./Footer";
 const testimonialsData = [
   {
     rating: 4.5,
@@ -62,23 +62,19 @@ const CityTestimonial = () => {
 
   return (
     <div className={`city-outer ${isMobile ? "mobile-view" : ""}`}>
- 
+      <div className="city-heading">
+        <h2 className="section_title">
+          {" "}
+          Testimonials of Clients From Different Cities
+        </h2>
 
-<div className="city-heading">
-        <h2 className="section_title"> Testimonials of Clients From Different Cities</h2>    
-       
-        <img 
-        src="images/section_delimiter_1.png" alt="img" class="section_devider"/>
-         
-        </div>
+        <img
+          src="images/section_delimiter_1.png"
+          alt="img"
+          class="section_devider"
+        />
+      </div>
 
-    
-     
-          
-
-
-            
-      
       <div className="city-right">
         <div className="Wrap">
           <div className="city-container-wrapper">
@@ -140,6 +136,9 @@ const CityTestimonial = () => {
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <Footer></Footer>
     </div>
   );
 };

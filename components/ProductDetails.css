@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(#00b4ef,white, white, white);
+    background: linear-gradient(rgb(231, 203, 77),rgb(247, 247, 247), white, rgb(231, 203, 77));
     padding: 20px;
     font-family: Arial, sans-serif;
     width: 70%;
@@ -39,7 +39,8 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
-  border-radius: 20%;
+  border-radius: 30%;
+  width: 30px;
 }
   
 .p-deets{
@@ -89,7 +90,7 @@
   }
   
   .bestseller {
-    color: #086629;
+    color: #0b009e;
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 0;

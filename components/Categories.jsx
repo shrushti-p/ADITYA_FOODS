@@ -9,39 +9,28 @@ const categories = [
   { id: 2, name: "Oil" },
   { id: 3, name: "Paste" },
   { id: 4, name: "Chutneys" },
-  { id: 5, name: "Veggies" },
-  { id: 6, name: "Dairy" }
+  { id: 5, name: "Vegetables" },
+  { id: 6, name: "Dairy Delight" }
 ];
-// -3 , -4, green peases, panner, ghee-2, khava,
 
 const menuItems = [
-  { id: 1, name: "Mango Pulp", price: 24.12, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Mango Pulp" },
-  { id: 2, name: "Orange Pulp", price: 29.70, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Fruit Pulp" },
-  { id: 3, name: "Fruit Pulp", price: 8.20, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Fruit Pulp" },
-  { id: 4, name: "Fruit Pulp", price: 14.40, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Fruit Pulp" },
-  { id: 5, name: "Fruit Pulp", price: 40.30, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Fruit Pulp" },
-  { id: 6, name: "Fruit Pulp", price: 22.40, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Fruit Pulp" },
-  { id: 7, name: "Fruit Pulp", price: 12.80, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Fruit Pulp" },
-  { id: 8, name: "Fruit Pulp", price: 13.30, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Fruit Pulp" },
-  { id: 1, name: "Oil", price: 24.12, categoryId: 2, image: "images/oil.png", description: "Oil?" },
-  { id: 2, name: "Oil", price: 29.70, categoryId: 2, image: "images/oil1.jpeg", description: "Maybe Oil" },
-  { id: 3, name: "Oil", price: 8.20, categoryId: 2, image: "images/oil2.jpeg", description: "Nah not Oil" },
-  { id: 6, name: "Paste", price: 22.40, categoryId: 3, image: "images/ggpaste.jpeg", description: "ggpaste" },
-  { id: 7, name: "Paste", price: 12.80, categoryId: 3, image: "images/GG paste.png", description: "ggpaste" },
-  { id: 8, name: "Paste", price: 13.30, categoryId: 3, image: "images/ggpaste.jpeg", description: "ggpaste" },
-  { id: 1, name: "Chutney", price: 24.12, categoryId: 4, image: "images/oil.png", description: "Chutney" },
-  { id: 6, name: "Spectacular Whatever Chutney", price: 22.40, categoryId: 4, image: "images/paste_og.jpeg", description: "Chutney—a luscious elixir of flavors, where sweet meets spice in a rhapsody of tangy delight. A single spoonful ignites the senses, a dance of zest and warmth that lingers like a poetic aftertaste." },
-  { id: 7, name: "Chutney", price: 12.80, categoryId: 4, image: "images/GG Chutney.png", description: "ggChutney" },
-  { id: 8, name: "Chutney", price: 13.30, categoryId: 4, image: "images/ggChutney.jpeg", description: "ggChutney" },
-  { id: 9, name: "Peas", price: 32.90, categoryId: 5, image: "images/peas.jpg", description: "peas?" },
-  { id: 10, name: "Paneer", price: 7.40, categoryId: 6, image: "images/greek_salad.jpg", description: "Fresh Mediterranean salad with feta cheese" },
-  { id: 11, name: "Ghee", price: 14.10, categoryId: 6, image: "images/flavour_ice.jpg", description: "Assorted flavors of creamy ice cream" },
-  { id: 12, name: "Khava", price: 52.10, categoryId: 6, image: "images/bolognese_pasta.jpg", description: "Rich Bolognese sauce with fresh pasta" },
+  { id: 1, name: "Rabdi Pulp", price: 200, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Delicious Rabdi Pulp (1kg)" },
+  { id: 2, name: "Jamun Pulp", price: 350, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Fresh Jamun Pulp (1kg)" },
+  { id: 3, name: "Mango Pulp", price: 270, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Ripe Mango Pulp (1kg)" },
+  { id: 4, name: "Guava Pulp", price: 150, categoryId: 1, image: "images/fruit_pulp.jpeg", description: "Tasty Guava Pulp (1kg)" },
+  { id: 5, name: "Peanut Oil", price: 160, categoryId: 2, image: "images/oil.png", description: "Pure Peanut Oil (1L)" },
+  { id: 6, name: "Kardi Oil", price: 230, categoryId: 2, image: "images/oil1.jpeg", description: "Healthy Kardi Oil (1L)" },
+  { id: 7, name: "Ginger Garlic Paste", price: 100, categoryId: 3, image: "images/ggpaste.jpeg", description: "Fresh Ginger Garlic Paste (1kg)" },
+  { id: 8, name: "Peanut Chutney", price: 240, categoryId: 4, image: "images/chutney.jpeg", description: "Tasty Peanut Chutney (1kg)" },
+  { id: 9, name: "Javas Chutney", price: 250, categoryId: 4, image: "images/chutney.jpeg", description: "Rich Javas Chutney (1kg)" },
+  { id: 10, name: "Green Peas", price: 90, categoryId: 5, image: "images/peas.jpg", description: "Fresh Green Peas (1kg)" },
+  { id: 11, name: "Paneer", price: 280, categoryId: 6, image: "images/paneer.jpg", description: "Soft Paneer (1kg)" },
+  { id: 12, name: "Khava", price: 300, categoryId: 6, image: "images/khava.jpg", description: "Traditional Khava (1kg)" },
+  { id: 13, name: "Ghee", price: 800, categoryId: 6, image: "images/ghee.jpg", description: "Pure Ghee (1kg)" },
+  { id: 14, name: "Cow Ghee", price: 600, categoryId: 6, image: "images/cow_ghee.jpg", description: "Premium Cow Ghee (1kg)" }
 ];
 
-
 const Categories = () => {
-
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -52,12 +41,8 @@ const Categories = () => {
   return (
     <>
     <div className="categories-container">
-
-      <h1 className="title">Categories <br /><img src="images/section_delimiter_1.png" alt="img" class="title_bottom"/><img src="images/penut.png" alt="Floating custerdapple" className="floating-peanut" /></h1>
+      <h1 className="title">Categories <br /><img src="images/section_delimiter_1.png" alt="img" class="title_bottom"/><img src="images/peanut.png" alt="Floating peanut" className="floating-peanut" /></h1>
       
-      
-
-      {/* Categories Navigation */}
       <nav className="category-nav">
         {categories.map((category) => (
           <button
@@ -70,7 +55,6 @@ const Categories = () => {
         ))}
       </nav>
 
-      {/* Menu Items */}
       <div className="menu-items">
         {filteredItems.map((item) => (
           <div key={item.id} className="menu-item" onClick={() => setSelectedProduct(item)}>
@@ -79,12 +63,10 @@ const Categories = () => {
               <h3>{item.name} <span className="price">Rs. {item.price.toFixed(2)}</span></h3>
               <p>{item.description}</p>
             </div>
-     
           </div>
         ))}
       </div>
 
-      {/* Product Details Modal */}
       {selectedProduct && <ProductDetails product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
       
     </div>

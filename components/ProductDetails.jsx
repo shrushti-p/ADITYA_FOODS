@@ -2,14 +2,46 @@ import React, { useState } from "react";
 import "./ProductDetails.css";
 
 const ProductDetails = ({ product, onClose }) => {
-  if (!product) return null; // Don't render if no product is selected
+  if (!product) return null;
 
-  const [selectedWeight, setSelectedWeight] = useState("1L");
+  // Define weight-price mappings per category
+  const weightPriceMapping = {
+    1: { "½ kg": product.price / 2, "1 kg": product.price }, // Pulp
+    2: {
+      "½ L": product.price / 2,
+      "1 L": product.price,
+      "5 L": product.price * 5,
+    }, // Oil
+    3: { "½ kg": product.price / 2, "1 kg": product.price }, // Paste
+    4: { "½ kg": product.price / 2, "1 kg": product.price }, // Chutneys
+    5: { "1 kg": product.price }, // Vegetables
+    6: { "½ kg": product.price / 2, "1 kg": product.price }, // Dairy Delight
+  };
+
+  // Get weight options based on category
+  const weightOptions = Object.keys(
+    weightPriceMapping[product.categoryId] || {}
+  );
+
+  const [selectedWeight, setSelectedWeight] = useState(weightOptions[0]);
+  const [currentPrice, setCurrentPrice] = useState(
+    weightPriceMapping[product.categoryId][selectedWeight]
+  );
+
+  // Handle weight selection
+  const handleWeightChange = (weight) => {
+    setSelectedWeight(weight);
+    setCurrentPrice(weightPriceMapping[product.categoryId][weight]);
+  };
+
+  
 
   return (
     <div className="p-modal">
       <div className="p-container">
-        <button className="close-button" onClick={onClose}>✖</button>
+        <button className="close-button" onClick={onClose}>
+          ✖
+        </button>
 
         <div className="p-deets">
           {/* Product Image Section */}
@@ -23,18 +55,21 @@ const ProductDetails = ({ product, onClose }) => {
             <p className="name">{product.name}</p>
             <p className="rating">⭐ 5.0 | 204 Reviews</p>
             <p className="price">
-              Rs. {product.price} <span className="old-price">Rs. {Math.round(product.price * 1.3)}</span>
+              Rs. {currentPrice}{" "}
+              <span className="old-price">
+                Rs. {Math.round(currentPrice * 1.3)}
+              </span>
             </p>
             <p className="description">{product.description}</p>
 
-            {/* Weight Selection (Static for now, can be modified per product) */}
+            {/* Weight Selection */}
             <div className="weight-section">
               <span>Weight</span>
-              {["1L", "2L", "5L"].map((weight) => (
+              {weightOptions.map((weight) => (
                 <button
                   key={weight}
                   className={selectedWeight === weight ? "selected" : ""}
-                  onClick={() => setSelectedWeight(weight)}
+                  onClick={() => handleWeightChange(weight)}
                 >
                   {weight}
                 </button>
@@ -53,10 +88,7 @@ const ProductDetails = ({ product, onClose }) => {
         <div className="additional-information">
           <div className="tabs">
             <button className="tab active">ADDITIONAL INFORMATION</button>
-            {/* <button className="tab"></button>
-            <button className="tab">REVIEW</button> */}
           </div>
-
           <div className="additional-info">
             <table>
               <tbody>
@@ -69,7 +101,7 @@ const ProductDetails = ({ product, onClose }) => {
                   <td>Veg</td>
                 </tr>
               </tbody>
-            </table> 
+            </table>
           </div>
         </div>
       </div>

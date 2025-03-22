@@ -27,7 +27,6 @@ function App() {
   return (
     <>
 
-
 <Router>
       <Navbar />
       <Routes>
