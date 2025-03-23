@@ -1,47 +1,59 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./ProductDetails.css";
 
 const ProductDetails = ({ product, onClose }) => {
   if (!product) return null;
 
-  // Define weight-price mappings per category
-  const weightPriceMapping = {
-    1: { "½ kg": product.price / 2, "1 kg": product.price }, // Pulp
-    2: {
-      "½ L": product.price / 2,
-      "1 L": product.price,
-      "5 L": product.price * 5,
-    }, // Oil
-    3: { "½ kg": product.price / 2, "1 kg": product.price }, // Paste
-    4: { "½ kg": product.price / 2, "1 kg": product.price }, // Chutneys
-    5: { "1 kg": product.price }, // Vegetables
-    6: { "½ kg": product.price / 2, "1 kg": product.price }, // Dairy Delight
-  };
+  // Extract variants directly from the product object
+  const weightPriceMapping = {};
+  product.variants.forEach((variant) => {
+    weightPriceMapping[variant.weight] = variant.price;
+  });
 
-  // Get weight options based on category
-  const weightOptions = Object.keys(
-    weightPriceMapping[product.categoryId] || {}
-  );
+  const weightOptions = Object.keys(weightPriceMapping);
 
   const [selectedWeight, setSelectedWeight] = useState(weightOptions[0]);
-  const [currentPrice, setCurrentPrice] = useState(
-    weightPriceMapping[product.categoryId][selectedWeight]
-  );
+  const [currentPrice, setCurrentPrice] = useState(weightPriceMapping[selectedWeight]);
 
   // Handle weight selection
   const handleWeightChange = (weight) => {
     setSelectedWeight(weight);
-    setCurrentPrice(weightPriceMapping[product.categoryId][weight]);
+    setCurrentPrice(weightPriceMapping[weight]);
   };
 
-  
+  // Function to add product to cart
+  const handleAddToCart = async () => {
+    try {
+      const token = localStorage.getItem("token"); // Ensure the user is authenticated
+      if (!token) {
+        alert("Please log in to add items to your cart.");
+        return;
+      }
+
+      const response = await axios.post(
+        "http://localhost:3000/cart/add",
+        {
+          productId: product._id,
+          quantity: 1,
+          weight: selectedWeight, // Include weight in the cart
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+
+      alert(response.data.message); // Show success message
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+      alert("Failed to add product to cart.");
+    }
+  };
 
   return (
     <div className="p-modal">
       <div className="p-container">
-        <button className="close-button" onClick={onClose}>
-          ✖
-        </button>
+        <button className="close-button" onClick={onClose}>✖</button>
 
         <div className="p-deets">
           {/* Product Image Section */}
@@ -56,9 +68,7 @@ const ProductDetails = ({ product, onClose }) => {
             <p className="rating">⭐ 5.0 | 204 Reviews</p>
             <p className="price">
               Rs. {currentPrice}{" "}
-              <span className="old-price">
-                Rs. {Math.round(currentPrice * 1.3)}
-              </span>
+              <span className="old-price">Rs. {Math.round(currentPrice * 1.3)}</span>
             </p>
             <p className="description">{product.description}</p>
 
@@ -78,30 +88,11 @@ const ProductDetails = ({ product, onClose }) => {
 
             {/* Buttons */}
             <div className="buttons">
-              <button className="add-to-cart">Add To Cart</button>
+              <button className="add-to-cart" onClick={handleAddToCart}>
+                Add To Cart
+              </button>
               <button className="buy-now">Buy Now</button>
             </div>
-          </div>
-        </div>
-
-        {/* Additional Information Section */}
-        <div className="additional-information">
-          <div className="tabs">
-            <button className="tab active">ADDITIONAL INFORMATION</button>
-          </div>
-          <div className="additional-info">
-            <table>
-              <tbody>
-                <tr>
-                  <td>Product</td>
-                  <td>{product.name}</td>
-                </tr>
-                <tr>
-                  <td>Dietary Preference</td>
-                  <td>Veg</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>

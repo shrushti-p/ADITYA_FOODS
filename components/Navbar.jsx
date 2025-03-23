@@ -20,8 +20,7 @@ export default function Navbar() {
     <nav className="navbar">
       {/* Top Section */}
       <div className="navbar-top">
-        <div className="logo">
-        </div>
+        <div className="logo"></div>
         <div className="search-bar">
           <FiSearch className="search-icon" />
           <input
@@ -33,7 +32,9 @@ export default function Navbar() {
           />
         </div>
         <div className="home-icon">
-          <FaUser className="iconss" />
+          <Link to="/login">
+            <FaUser className="iconss" />
+          </Link>
           <Link to="/cart">
             <FaShoppingCart className="iconss" />
           </Link>
@@ -44,8 +45,14 @@ export default function Navbar() {
       <div className="nav-bar">
         <ul className="nav-list">
           {navItems.map((item) => (
-            <li key={item.name} className={`nav-item ${selectedCategory === item.id ? "selected" : ""}`} onClick={() => setSelectedCategory(item.id)}>
-              <Link to={item.path} className="nav-link">{item.name}</Link>
+            <li
+              key={item.name}
+              className={`nav-item ${selectedCategory === item.id ? "selected" : ""}`}
+              onClick={() => setSelectedCategory(item.id)}
+            >
+              <Link to={item.path} className="nav-link">
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>

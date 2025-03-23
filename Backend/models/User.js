@@ -1,9 +1,15 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+const CartItemSchema = new mongoose.Schema({
+  product: { type: mongoose.Schema.Types.ObjectId, ref: "MenuItem" },
+  quantity: { type: Number, default: 1 },
+  weight: { type: String, required: true }, // Store the selected weight variant
 });
 
-module.exports = mongoose.model("User", userSchema);
+const UserSchema = new mongoose.Schema({
+  email: String,
+  password: String,
+  cart: [CartItemSchema], // Cart contains multiple products with weight variants
+});
+
+module.exports = mongoose.model("User", UserSchema);

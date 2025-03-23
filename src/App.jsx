@@ -9,7 +9,6 @@ import AboutUs from '../components/AboutUs';
 import Footer from '../components/Footer';
 import ContactUs from '../components/ContactUs';
 import PrivacyPolicy from '../components/PrivacyPolicy';
-import LoginPage from '../components/LoginPage';
 import SignupPage from '../components/SignupPage';
 import StatsSection from '../components/StatsSection';
 import HowToOrder from '../components/HowToOrder';
@@ -19,6 +18,7 @@ import HeroProducts from "../components/HeroProducts";
 import Testimonials from '../components/Testimonials';
 import CityTestimonial from "../components/CityTestimonial";
 import Cart from "../components/Cart";
+import Login from "../components/LoginPage";
 
 
 function App() {
@@ -42,6 +42,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/citytestimonial" element={<CityTestimonial />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
 
