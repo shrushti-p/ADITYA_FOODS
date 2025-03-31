@@ -190,6 +190,17 @@ app.delete("/api/cart/:id", verifyToken, async (req, res) => {
   }
 });
 
+// Fetch all products (menu items)
+app.get("/api/products", async (req, res) => {
+  try {
+    const products = await MenuItem.find().populate("categoryId", "name"); // Populating category name
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ message: "Server error", error });
+  }
+});
+
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
