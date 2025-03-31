@@ -19,6 +19,7 @@ import Testimonials from '../components/Testimonials';
 import CityTestimonial from "../components/CityTestimonial";
 import Cart from "../components/Cart";
 import Login from "../components/LoginPage";
+import Checkout from "../components/Checkout";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/citytestimonial" element={<CityTestimonial />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </Router>

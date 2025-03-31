@@ -1,0 +1,73 @@
+/* Checkout Page Styling */
+.checkout-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .checkout-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .address-form, .order-summary, .payment-options {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .address-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .order-summary {
+    padding: 15px;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .payment-options {
+    padding: 15px;
+  }
+  
+  .payment-options label {
+    display: block;
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .place-order-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff3e6c;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .place-order-btn:hover {
+    background: #e5325d;
+  }
+  
