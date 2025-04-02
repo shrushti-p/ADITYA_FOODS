@@ -20,6 +20,8 @@ import CityTestimonial from "../components/CityTestimonial";
 import Cart from "../components/Cart";
 import Login from "../components/LoginPage";
 import Checkout from "../components/Checkout";
+import ProductDetailsPage from "../components/ProductDetailsPage";
+
 
 
 function App() {
@@ -45,6 +47,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/product/:id" element={<ProductDetailsPage />} />
       </Routes>
     </Router>
 

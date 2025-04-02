@@ -1,4 +1,59 @@
 /* Navbar.css */
+.search-results {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 100;
+}
+
+.search-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  color: black;
+}
+
+.search-result-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-result-text {
+  flex: 1;
+}
+
+.search-result-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.search-result-price {
+  font-size: 12px;
+  color: green;
+}
+
+.no-results {
+  text-align: center;
+  padding: 10px;
+  color: red;
+}
 
 .navbar {
     width: 100%;

@@ -8,15 +8,15 @@ import "./Navbar.css";
 export default function Navbar() {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [search, setSearch] = useState("");
-  const [products, setProducts] = useState([]); // Store only products
-  const [filteredProducts, setFilteredProducts] = useState([]); // Filtered search results
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   // 🔹 Fetch products from backend
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/products"); // Fetch only products
-        setProducts(response.data);
+        const response = await axios.get("http://localhost:3000/api/products");
+        setProducts(response.data || []);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -24,11 +24,11 @@ export default function Navbar() {
     fetchProducts();
   }, []);
 
-  // 🔹 Filter products dynamically
+  // 🔹 Correct Search Filtering
   useEffect(() => {
     if (search.trim()) {
       const results = products.filter((product) =>
-        product.name.toLowerCase().includes(search.toLowerCase())
+        product.name?.toLowerCase().includes(search.toLowerCase())
       );
       setFilteredProducts(results);
     } else {
@@ -72,41 +72,45 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 🔹 Search Results Dropdown (Like Meesho) */}
-      {search && (
+      {/* 🔹 Search Results (Correctly Displayed) */}
+      {search ? (
         <div className="search-results">
           {filteredProducts.length > 0 ? (
-            filteredProducts.map((product) => (
-              <Link key={product._id} to={`/product/${product._id}`} className="search-result-item">
-                <img src={product.image || "/default-product.jpg"} alt={product.name} className="search-result-img" />
-                <div className="search-result-text">
-                  <p className="search-result-name">{product.name}</p>
-                  <p className="search-result-price">₹{product.price || "N/A"}</p>
-                </div>
-              </Link>
-            ))
+            <div className="search-list">
+              {filteredProducts.map((product) => (
+                <Link key={product._id} to={`/product/${product._id}`} className="search-result-item">
+                  <img src={product.image || "/default-product.jpg"} alt={product.name} className="search-result-img" />
+                  <div className="search-result-text">
+                    <p className="search-result-name">{product.name}</p>
+                    <p className="search-result-price">
+  ₹{product.variants?.[0]?.price || "N/A"}
+</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           ) : (
             <p className="no-results">No matching products found</p>
           )}
         </div>
+      ) : (
+        // 🔹 Show Navigation Bar ONLY if NOT searching
+        <div className="nav-bar">
+          <ul className="nav-list">
+            {navItems.map((item) => (
+              <li
+                key={item.id}
+                className={`nav-item ${selectedCategory === item.id ? "selected" : ""}`}
+                onClick={() => setSelectedCategory(item.id)}
+              >
+                <Link to={item.path} className="nav-link">
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
-
-      {/* 🔹 Navigation Bar */}
-      <div className="nav-bar">
-        <ul className="nav-list">
-          {navItems.map((item) => (
-            <li
-              key={item.id}
-              className={`nav-item ${selectedCategory === item.id ? "selected" : ""}`}
-              onClick={() => setSelectedCategory(item.id)}
-            >
-              <Link to={item.path} className="nav-link">
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
     </nav>
   );
 }

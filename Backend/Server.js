@@ -9,8 +9,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+
 app.use(express.json());
+app.use(cors({ origin: "http://localhost:5173" }));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
@@ -196,6 +197,28 @@ app.get("/api/products", async (req, res) => {
     const products = await MenuItem.find().populate("categoryId", "name"); // Populating category name
     res.json(products);
   } catch (error) {
+    res.status(500).json({ message: "Server error", error });
+  }
+});
+
+app.get("/api/products/:id", async (req, res) => {
+  try {
+    console.log("Received ID:", req.params.id); // Debugging log
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid Product ID" });
+    }
+
+    const product = await MenuItem.findById(id).populate("categoryId", "name");
+    
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    res.json(product);
+  } catch (error) {
+    console.error("Server Error:", error);
     res.status(500).json({ message: "Server error", error });
   }
 });
