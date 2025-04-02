@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
 import axios from "axios";
 import "./Cart.css";
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // Initialize navigate function
 
   // Fetch cart items from the backend
   const fetchCartItems = async () => {
@@ -35,13 +33,45 @@ export default function Cart() {
     fetchCartItems();
   }, []);
 
-  // Function to handle checkout
-  const handleCheckout = () => {
-    if (cartItems.length === 0) {
-      alert("Your cart is empty. Add some items before checking out.");
-      return;
+  // Remove item from cart
+  const handleRemove = async (id) => {
+    try {
+      const token = localStorage.getItem("token");
+      await axios.delete(`http://localhost:3000/api/cart/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setCartItems(cartItems.filter((item) => item._id !== id));
+    } catch (error) {
+      console.error("Error removing item:", error);
     }
-    navigate("/checkout"); // Redirect to checkout page
+  };
+
+  // Change quantity of a cart item
+  const handleQuantityChange = async (id, delta) => {
+    try {
+      const token = localStorage.getItem("token");
+      const updatedItem = cartItems.find((item) => item._id === id);
+      const newQuantity = Math.max(1, updatedItem.quantity + delta);
+
+      await axios.put(
+        `http://localhost:3000/api/cart/${id}`,
+        { quantity: newQuantity },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+
+      setCartItems(
+        cartItems.map((item) =>
+          item._id === id ? { ...item, quantity: newQuantity } : item
+        )
+      );
+    } catch (error) {
+      console.error("Error updating quantity:", error);
+    }
+  };
+
+  // Handle checkout - Redirect to the checkout page
+  const handleCheckout = () => {
+    window.location.href = "/checkout";
   };
 
   // Calculate total price of cart items
@@ -81,48 +111,53 @@ export default function Cart() {
                   <td colSpan="6">Your cart is empty.</td>
                 </tr>
               ) : (
-                cartItems.map((item) => (
-                  <tr key={item._id}>
-                    <td>
-                      <div className="product-info">
-                        <img
-                          src={item.image || "/images/default.png"}
-                          alt={item.name || "Unnamed"}
-                        />
-                        <div>
-                          <h4>{item.name || "No Name"}</h4>
-                          <p>Color: {item.color || "Unknown"}</p>
+                cartItems.map((item) => {
+                  console.log("Rendering item:", item); // Debug log
+                  return (
+                    <tr key={item._id}>
+                      <td>
+                        <div className="product-info">
+                          <img
+                            src={item.image || "/images/default.png"}
+                            alt={item.name || "Unnamed"}
+                          />
+                          <div>
+                            <h4>{item.name || "No Name"}</h4>
+                            <p>Color: {item.color || "Unknown"}</p>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>{item.weight ? `${item.weight}` : "Not specified"}</td>
-                    <td>
-                      <div className="quantity-controls">
+                      </td>
+                      <td>
+                        {item.weight ? `${item.weight}` : "Not specified"}
+                      </td>
+                      <td>
+                        <div className="quantity-controls">
+                          <button
+                            onClick={() => handleQuantityChange(item._id, -1)}
+                          >
+                            -
+                          </button>
+                          <span>{item.quantity}</span>
+                          <button
+                            onClick={() => handleQuantityChange(item._id, 1)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </td>
+                      <td>₹{(item.price || 0).toFixed(2)}</td>
+                      <td>₹{((item.price || 0) * item.quantity).toFixed(2)}</td>
+                      <td>
                         <button
-                          onClick={() => handleQuantityChange(item._id, -1)}
+                          className="remove-btn"
+                          onClick={() => handleRemove(item._id)}
                         >
-                          -
+                          🗑️
                         </button>
-                        <span>{item.quantity}</span>
-                        <button
-                          onClick={() => handleQuantityChange(item._id, 1)}
-                        >
-                          +
-                        </button>
-                      </div>
-                    </td>
-                    <td>₹{(item.price || 0).toFixed(2)}</td>
-                    <td>₹{((item.price || 0) * item.quantity).toFixed(2)}</td>
-                    <td>
-                      <button
-                        className="remove-btn"
-                        onClick={() => handleRemove(item._id)}
-                      >
-                        🗑️
-                      </button>
-                    </td>
-                  </tr>
-                ))
+                      </td>
+                    </tr>
+                  );
+                })
               )}
             </tbody>
           </table>
