@@ -34,13 +34,14 @@ const User = mongoose.model("User", new mongoose.Schema({
 const Category = mongoose.model("Category", new mongoose.Schema({ name: String }));
 
 // MenuItem Schema
-const MenuItem = mongoose.model("MenuItem", new mongoose.Schema({
+ const MenuItem = mongoose.model("MenuItem", new mongoose.Schema({
   name: String,
   description: String,
   categoryId: { type: mongoose.Schema.Types.ObjectId, ref: "Category" },
   image: String,
   variants: [{ weight: String, price: Number }]
 }));
+
 
 // CartItem Schema – includes the selected weight
 const CartItem = mongoose.model("CartItem", new mongoose.Schema({
@@ -222,6 +223,32 @@ app.get("/api/products/:id", async (req, res) => {
     res.status(500).json({ message: "Server error", error });
   }
 });
+
+
+// const parser = require("./middleware/multer");
+
+
+// app.post("/api/products", parser.single("image"), async (req, res) => {
+//   try {
+//     const { name, description, categoryId, variants } = req.body;
+
+//     const parsedVariants = JSON.parse(variants); // Make sure variants come as JSON string from frontend
+
+//     const newItem = new MenuItem({
+//       name,
+//       description,
+//       categoryId,
+//       image: req.file.path, // Cloudinary URL
+//       variants: parsedVariants,
+//     });
+
+//     await newItem.save();
+//     res.status(201).json({ message: "Product created", product: newItem });
+//   } catch (err) {
+//     console.error("Error uploading product:", err);
+//     res.status(500).json({ message: "Server error", error: err });
+//   }
+// });
 
 
 // Start Server

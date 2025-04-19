@@ -5,7 +5,7 @@ import Footer from "./Footer";
 const products = [
   {
     id: 1,
-    productImage: "images/pulp_og.jpeg",
+    productImage: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745058621/rbdi_qn0aas.jpg",
     recipes: [
         {
           name: "Sitaphal Rabdi",
@@ -48,7 +48,7 @@ const products = [
   },
   {
     id: 2,
-    productImage: "images/product2.jpg",
+    productImage: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745057461/mango_pulp_eajyza.jpg",
     recipes: [
       {
         name: "Mango Rabdi",
@@ -90,7 +90,7 @@ const products = [
 
   {
     id: 3,
-    productImage: "images/product2.jpg",
+    productImage: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745057113/jamun_pulp_ymy3x5.jpg",
     recipes: [
       {
         name: "Jamun Rabdi",
@@ -143,7 +143,7 @@ const products = [
 
   {
     id: 4,
-    productImage: "images/product2.jpg",
+    productImage: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745057593/guva_pulp_ds3bvs.jpg",
     recipes: [
       {
         name: "Guava Ice Cream",
@@ -196,7 +196,7 @@ const products = [
 
   {
     id: 5,
-    productImage: "images/product2.jpg",
+    productImage: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745047556/Ginger_gizthv.jpg",
     recipes: [
       {
         name: "Ginger-Garlic Rice",
@@ -253,7 +253,7 @@ const products = [
 
   {
     id: 6,
-    productImage: "images/product2.jpg",
+    productImage: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745057513/paneer_zrqdhv.jpg",
     recipes: [
       {
         name: "Paneer Tikka",
@@ -310,7 +310,7 @@ const products = [
 
   {
     id: 7,
-    productImage: "images/product2.jpg",
+    productImage: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745060999/green_peas_b6njvt.jpg",
     recipes: [
       {
         name: "Green Peas Masala",

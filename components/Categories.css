@@ -19,14 +19,14 @@
   margin-top: 20px;
 }
 
-.floating-peanut {
+/* .floating-peanut {
   width: 150px;
   height: auto;
   position: absolute;
   left: 85%;
   bottom: -65px;
   animation: floatBurger 3s ease-in-out infinite;
-}
+} */
 
 /* Category Navigation */
 .category-nav {
@@ -79,10 +79,11 @@
 }
 
 .menu-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
   object-fit: cover;
+  box-shadow: #000000;
 }
 
 .menu-info {
@@ -90,25 +91,28 @@
 }
 
 .menu-info h3 {
+
   font-size: 18px;
-  margin-left: 10px;
+  margin-left: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .menu-info p {
   font-size: 15px;
-  margin-left: 10px;
+  margin-left: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: cursive;
 }
 
 .price {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 13px;
 }
 .menu-item {
   position: relative;
@@ -117,7 +121,7 @@
 }
 
 .menu-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .hover-sign {
@@ -147,8 +151,12 @@
   }
 
   .category-nav {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-left: -20px;
+
   }
 
   .category-button {

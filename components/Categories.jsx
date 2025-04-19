@@ -24,16 +24,16 @@ const Categories = () => {
       <div className="categories-container">
         <h1 className="title">
           Categories <br />
-          <img
-            src="images/section_delimiter_1.png"
+          {/* <img
+            // src="images/section_delimiter_1.png"
             alt="img"
             className="title_bottom"
-          />
-          <img
+          /> */}
+          {/* <img
             src="images/peanut.png"
             alt="Floating peanut"
             className="floating-peanut"
-          />
+          /> */}
         </h1>
 
         <nav className="category-nav">
@@ -68,7 +68,7 @@ const Categories = () => {
                     <p>{item.description}</p>
                     {item.variants.map((variant, index) => (
                       <p key={index} className="price">
-                        {variant.weight} - Rs. {variant.price}
+                        {variant.weight} - {variant.price}/-
                       </p>
                     ))}
                   </div>

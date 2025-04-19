@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgb(231, 203, 77),rgb(247, 247, 247), white, rgb(231, 203, 77));
+    background: linear-gradient(#7fd5f1,rgb(247, 247, 247), white, #80d0eb);
     padding: 20px;
     font-family: Arial, sans-serif;
     width: 70%;
@@ -54,17 +54,19 @@
 }
 
 .p-image {
-  width: 30%;
-  /* height: 150px; */
+ 
   object-fit: cover;
-  border-radius: 8px;text-align: center;
+  text-align: center;
   margin: auto 20px auto 20px;
+
 }
   
   .p-image .img {
-    width: 50%;
-    border-radius: 5px;
+    width: 250px;
+    height: 180px;
     margin: auto auto;
+    margin-left: 20px;
+    border-radius: 10px;
   }
 
   /* .p-image img {
@@ -87,6 +89,7 @@
     width: 65%;
     /* border: #333 solid 2px; */
     margin: 20px;
+    margin-left: 30px;
   }
   
   .bestseller {
@@ -95,6 +98,7 @@
     font-size: 18px;
     margin-bottom: 0;
     padding: 0;
+    margin-left: 30px;
   }
 
   .p-info .name{
@@ -103,16 +107,22 @@
     font-size: 35px;
     margin: 0;
     padding: 0;
+    margin-left: 30px;
   }
   
   .rating {
-    color: rgb(0, 0, 0);
-    margin-bottom: 10px;
+   
+    margin: 10px 0; /* adjust spacing from title */
+    font-weight: 500;
+    margin-left: 30px;
+
   }
+  
   
   .price {
     font-size: 24px;
     font-weight: bold;
+    margin-left: 30px;
   }
   
   .old-price {
@@ -125,10 +135,12 @@
     margin: 15px 0;
     font-size: 14px;
     color: #333;
+    margin-left: 30px;
   }
   
   .weight-section {
     margin: 15px 0;
+    margin-left: 30px;
   }
   
   .weight-section button {
@@ -219,25 +231,57 @@
   }
 
   @media (max-width: 990px) {
-  .p-deets{
-    flex-direction: column;
-  }
-  .p-image {
-    width: 90%;
-  }
-  .p-info .name{
-    font-weight: 600;
-    font-size: 30px;
-  }
-  .weight-section {
-    margin: auto;
-  }
-  .p-info{
-    width: 90%;
-  }
-  }
+    .p-deets {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-
+    .p-info .name{
+      font-size: 20px;
+    }
+  
+    .p-image {
+      width: 80%;
+      text-align: center;
+      margin: 0;
+    }
+  
+    .p-image .img {
+      margin: auto;
+      display: block;
+    }
+  
+    .p-info {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+    .rating{
+      margin-left: 30px;
+      justify-content: center;
+    align-items: center;
+    text-align: center; 
+    }
+  
+    .p-info .name,
+    .bestseller,
+    .rating,
+    .price,
+    .description,
+    .weight-section {
+      margin-left: 0;
+      text-align: center;
+      
+    }
+  
+    .weight-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  
 /* Fade-in animation */
 @keyframes fadeIn {
   from {
@@ -249,3 +293,14 @@
     transform: scale(1);
   }
 }
+
+/* @media (max-width: 768px) {
+  .p-image .img {
+    width: 180px;
+    height: 130px;
+    margin: auto auto;
+   
+  } */
+
+
+
