@@ -27,7 +27,7 @@ const SignupPage = () => {
   return (
     <div className="container">
       <div className="signup-box">
-        <h2 className="text-2xl font-bold text-center mb-6">Create an Account</h2>
+        <h2 className="text">Create an Account</h2>
 
         {/* Signup Form */}
         <form onSubmit={handleSubmit} className="space-y-4">

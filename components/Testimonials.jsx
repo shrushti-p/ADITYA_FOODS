@@ -10,31 +10,121 @@ import Footer from "./Footer";
 const testimonialsData = [
   {
     rating: 4.5,
-    title: "Excellent Service",
-    text: "These super foods are packed with vital nutrients, including vitamins and minerals that can help keep you healthy. Plus they are easy to enjoy—just add water and let the magic happen!",
-    name: "Bridget Cosmus",
-    role: "Client",
+    
+    text: "This mango pulp tastes just like fresh Alphonso mangoes! I use it for making aamras, smoothies, and even mango lassi. Absolutely delicious and naturally sweet!",
+    name: "Aarti Verma",
+    
   },
   {
     rating: 5.0,
-    title: "Outstanding Quality",
-    text: "The products exceeded my expectations. They are of great quality and worth every penny. Highly recommend to anyone seeking a healthier lifestyle.",
-    name: "John Doe",
-    role: "Client",
+    text: "The mango pulp is absolutely delicious! It has the perfect sweetness and smooth texture, making it ideal for milkshakes and desserts",
+    name: "Priya Sharma",
+   
   },
   {
     rating: 4.0,
-    title: "Great Support",
-    text: "Customer support was very helpful and responsive. They answered all my questions and ensured I had a great experience.",
-    name: "Emily Smith",
-    role: "Client",
+ 
+    text: "A lifesaver for making sitaphal milkshake without the mess of removing seeds! Super creamy and naturally sweet.",
+    name: "Shalini Desai",
+    
   },
   {
     rating: 4.8,
-    title: "Amazing Experience",
-    text: "I had an amazing experience with this product. It has made a positive impact on my daily routine. Highly satisfied!",
-    name: "Michael Brown",
-    role: "Client",
+    text: "The taste is fresh and pure, but I found it a little thick for direct consumption. Mixing with milk worked well!",
+    name: "Raghav Patil",
+    
+  },
+  {
+    rating: 4.5,
+    text: "This guava pulp has a rich, natural flavor, perfect for making refreshing juice. No artificial taste, just pure fruit!",
+    name: "Neha Malhotra",
+    
+  },
+  {
+    rating: 4.4,
+    text: "Loved the taste, but I wish the pulp was a bit smoother. Otherwise, it’s great for making guava mocktails!",
+    name: "Anil Gupta",
+    
+  },
+  {
+    rating: 4.0,
+    text: "So good for making healthy drinks! I use this pulp for jamun shots, and it helps with digestion too. Great quality!",
+    name: "Sunil Pandey",
+    
+  },
+  {
+    rating: 4.9,
+    text: "The pulp is fresh and naturally tangy, but a bit on the thicker side. Works great when diluted with water!",
+    name: "Shweta Saxena",
+    
+  },
+  {
+    rating: 4.7,
+    text: "These peas are so fresh and sweet! Perfect for making matar paneer and aloo matar. I love that they don’t turn mushy after cooking",
+    name: "Priya Sinha",
+    
+  },
+  {
+    rating: 4.3,
+    text: "Good quality and fresh taste, overall, great value for money!",
+    name: "Rohit Bansal",
+    
+  },
+  {
+    rating: 4.1,
+    text: "Super convenient and saves so much time! The flavor is strong, fresh, and just like homemade.",
+    name: "Kavita Jain",
+    
+  },
+  {
+    rating: 4.3,
+    text: "Nice consistency and aroma, but I prefer it a little less salty. Otherwise, it's perfect for daily cooking!",
+    name: "Manoj Dubey",
+    
+  },
+  {
+    rating: 4.4,
+    text: "Soft, fresh, and doesn’t break while cooking! Perfect for making paneer tikka and butter paneer.",
+    name:" Radha Mishra",
+    
+  },
+  {
+    rating: 4.5,
+    text: "Good quality and great taste! Just wish it came in a vacuum-sealed pack for longer shelf life.",
+    name: "Sanjay Thakur",
+    
+  },
+  {
+    rating: 4.9,
+    text: "So fresh and perfect for making sweets like gulab jamun and barfi! Loved the texture and taste.",
+    name: "Simran Kaur",
+    
+  },
+  {
+    rating: 4.8,
+    text: "Perfect for making sweets! The mawa is fresh, soft, and gives an authentic taste to my homemade mithais.",
+    name: "Sunita Yadav",
+    
+  },
+  {
+    rating: 4.7,
+    text: "Pure and aromatic! This ghee reminds me of my grandmother’s homemade ghee. Perfect for cooking and sweets.",
+    name: "Swati Choudhary",  
+  },
+  {
+    rating: 4.2,
+    text: "This oil has a great nutty aroma and is perfect for deep frying. Much healthier than refined oils!",
+    name: "Anusha Reddy",  
+  },
+  {
+    rating: 4.0,
+    text: "Love the natural flavor! I use it for making traditional dishes, but wish the bottle had a better pouring design.",
+    name: "Rajesh Kumar",  
+  },
+  {
+    rating: 4.5,
+    text: "Light and healthy! I switched to safflower oil for cooking, and it’s really good for heart health.",
+    name: "Nidhi Agarwal",  
   },
 ];
 

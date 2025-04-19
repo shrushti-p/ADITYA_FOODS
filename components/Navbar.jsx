@@ -24,7 +24,7 @@ export default function Navbar() {
     fetchProducts();
   }, []);
 
-  // 🔹 Correct Search Filtering
+  // 🔹 Filter products based on search input
   useEffect(() => {
     if (search.trim()) {
       const results = products.filter((product) =>
@@ -36,6 +36,7 @@ export default function Navbar() {
     }
   }, [search, products]);
 
+  // 🔹 Navigation links
   const navItems = [
     { id: 1, name: "Home", path: "/" },
     { id: 2, name: "Categories", path: "/categories" },
@@ -48,7 +49,9 @@ export default function Navbar() {
     <nav className="navbar">
       {/* 🔹 Top Section */}
       <div className="navbar-top">
-        <div className="logo"></div>
+        <div className="logo">
+          <Link to="/">Aditya Foods</Link>
+        </div>
 
         {/* 🔹 Search Bar */}
         <div className="search-bar">
@@ -62,6 +65,7 @@ export default function Navbar() {
           />
         </div>
 
+        {/* 🔹 User & Cart */}
         <div className="home-icon">
           <Link to="/login">
             <FaUser className="iconss" />
@@ -72,19 +76,27 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 🔹 Search Results (Correctly Displayed) */}
+      {/* 🔹 Show search results if search term exists */}
       {search ? (
         <div className="search-results">
           {filteredProducts.length > 0 ? (
             <div className="search-list">
               {filteredProducts.map((product) => (
-                <Link key={product._id} to={`/product/${product._id}`} className="search-result-item">
-                  <img src={product.image || "/default-product.jpg"} alt={product.name} className="search-result-img" />
+                <Link
+                  key={product._id}
+                  to={`/product/${product._id}`}
+                  className="search-result-item"
+                >
+                  <img
+                    src={product.image || "/default-product.jpg"}
+                    alt={product.name}
+                    className="search-result-img"
+                  />
                   <div className="search-result-text">
                     <p className="search-result-name">{product.name}</p>
                     <p className="search-result-price">
-  ₹{product.variants?.[0]?.price || "N/A"}
-</p>
+                      ₹{product.variants?.[0]?.price || "N/A"}
+                    </p>
                   </div>
                 </Link>
               ))}
@@ -94,13 +106,15 @@ export default function Navbar() {
           )}
         </div>
       ) : (
-        // 🔹 Show Navigation Bar ONLY if NOT searching
+        // 🔹 Show main nav links only when not searching
         <div className="nav-bar">
           <ul className="nav-list">
             {navItems.map((item) => (
               <li
                 key={item.id}
-                className={`nav-item ${selectedCategory === item.id ? "selected" : ""}`}
+                className={`nav-item ${
+                  selectedCategory === item.id ? "selected" : ""
+                }`}
                 onClick={() => setSelectedCategory(item.id)}
               >
                 <Link to={item.path} className="nav-link">

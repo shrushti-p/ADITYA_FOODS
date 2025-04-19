@@ -123,7 +123,7 @@ export default function Cart() {
                           />
                           <div>
                             <h4>{item.name || "No Name"}</h4>
-                            <p>Color: {item.color || "Unknown"}</p>
+                    
                           </div>
                         </div>
                       </td>

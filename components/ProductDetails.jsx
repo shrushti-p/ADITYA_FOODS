@@ -22,6 +22,31 @@ const ProductDetails = ({ product, onClose }) => {
     setCurrentPrice(weightPriceMapping[weight]);
   };
 
+  const handleBuyNow = () => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert("Please login to buy this product.");
+    return;
+  }
+
+  const selectedPrice = product.variants?.find(
+    (v) => v.weight === selectedWeight
+  )?.price || product.price;
+
+  const checkoutItem = {
+    _id: product._id,
+    name: product.name,
+    image: product.image,
+    price: selectedPrice,           // ✅ correct variant price
+    quantity: 1,
+    weight: selectedWeight,
+  };
+
+  localStorage.setItem("checkoutItem", JSON.stringify(checkoutItem));
+  window.location.href = "/checkout";
+};
+
+
   // Function to add product to cart
   const handleAddToCart = async () => {
     try {
@@ -53,7 +78,19 @@ const ProductDetails = ({ product, onClose }) => {
   return (
     <div className="p-modal">
       <div className="p-container">
-        <button className="close-button" onClick={onClose}>✖</button>
+       <button
+  className="close-button"
+  onClick={() => {
+    if (onClose) {
+      onClose();
+    } else {
+      // fallback to go back when opened via route
+      window.history.back();
+    }
+  }}
+>
+  ✖
+</button>
 
         <div className="p-deets">
           {/* Product Image Section */}
@@ -91,7 +128,7 @@ const ProductDetails = ({ product, onClose }) => {
               <button className="add-to-cart" onClick={handleAddToCart}>
                 Add To Cart
               </button>
-              <button className="buy-now">Buy Now</button>
+              <button className="buy-now" onClick={handleBuyNow}>Buy Now</button>
             </div>
           </div>
         </div>
