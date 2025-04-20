@@ -6,19 +6,21 @@ function HeroProducts() {
     {
       name: "Fruits",
       products: [
-        { id: 1, name: "custerdapple pulp", price: 2.5, image: "images/paste_og.jpeg", sales: 50, description: "A silky-smooth blend of natures sweetest delight, bursting with the rich, tropical essence of custard apple. Velvety, fragrant, and irresistibly luscious, this pulp brings a melt-in-your-mouth sweetness that transforms every dish into a heavenly indulgence!" },
-        { id: 2, name: "Amla Candy", price: 1.2, image: "images/paste_og.jpeg", sales: 75, description: "Sweet & Tangy Nourishment! A perfect blend of zest and sweetness, packed with amlas natural goodness for a refreshing, healthy treat!" },
-        { id: 3, name: "Peanut Oil", price: 1.8, image: "images/paste_og.jpeg", sales: 40, description: "Pure & Nutty Goodness! Rich in flavor and nutrients, this golden oil enhances your cooking with a smooth, aromatic touch!" },
-        { id: 4, name: "Safflower Oil", price: 1.0, image: "images/paste_og.jpeg", sales: 65, description: "Light & Heart-Healthy Purity! A golden, mild-flavored oil rich in goodness, enhancing your dishes with a delicate touch while preserving natural flavors for wholesome perfection!." },
+        { id: 1, name: "Custurd Apple Pulp", price: 200, image: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745058621/rbdi_qn0aas.jpg", sales: 50, description: "A silky-smooth blend of natures sweetest delight, bursting with the rich, tropical essence of custard apple. Velvety, fragrant, and irresistibly luscious, this pulp brings a melt-in-your-mouth sweetness that transforms every dish into a heavenly indulgence!" },
+        { id: 2, name: "Amla Candy", price: 300, image: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745058647/amla_candy_mzrzzq.jpg", sales: 75, description: "Sweet & Tangy Nourishment! A perfect blend of zest and sweetness, packed with amlas natural goodness for a refreshing, healthy treat!" },
+        { id: 3, name: "Peanut Oil", price: 160, image: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745046740/peanut_dd2cba.jpg", sales: 40, description: "Pure & Nutty Goodness! Rich in flavor and nutrients, this golden oil enhances your cooking with a smooth, aromatic touch!" },
+        { id: 4, name: "Kardi Oil", price: 230, image: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745047152/Kardi_oop5ny.jpg", sales: 65, description: "Light & Heart-Healthy Purity! A golden, mild-flavored oil rich in goodness, enhancing your dishes with a delicate touch while preserving natural flavors for wholesome perfection!." },
       ],
     },
     {
       name: "Vegetables",
       products: [
-        { id: 5, name: "Green Peas", price: 2.0, image: "images/paste_og.jpeg", sales: 55, description: "A Burst of Freshness & Sweet Delight! Tender, vibrant, and naturally sweet, these little gems add a pop of color, flavor, and wholesome goodness to every dish. A true kitchen essential!" },
-        { id: 6, name: "Ginger Paste", price: 1.5, image: "images/paste_og.jpeg", sales: 80, description: "Fiery Zest & Warmth in Every Spoonful! A smooth and aromatic blend of pure ginger, packed with bold, peppery warmth to enhance your dishes. Elevate your cooking with its rich, zesty essence!" },
-        { id: 7, name: "Garlic Paste", price: 1.0, image: "images/paste_og.jpeg", sales: 65, description: "Bold & Aromatic Essence in Every Spoonful! A smooth, velvety blend of rich, pungent garlic, crafted to add depth, warmth, and an irresistible burst of flavor to your dishes. Elevate your cooking with its robust aroma and savory perfection!" },
-        { id: 8, name: "Peanut Chutney", price: 1.0, image: "images/paste_og.jpeg", sales: 50, description: "Nutty Fusion of Rich & Spicy Goodness! A creamy blend of roasted peanuts and bold spices, crafted to deliver a perfect balance of crunch, heat, and irresistible flavor. Every spoonful adds a savory depth, elevating your meals with its earthy, zesty essence!" },
+        { id: 5, name: "Green Peas", price: 90, image: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745060999/green_peas_b6njvt.jpg", sales: 55, description: "A Burst of Freshness & Sweet Delight! Tender, vibrant, and naturally sweet, these little gems add a pop of color, flavor, and wholesome goodness to every dish. A true kitchen essential!" },
+        { id: 6, name: "Ginger Paste", price: 100, image: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745047556/Ginger_gizthv.jpg", sales: 80, description: "Fiery Zest & Warmth in Every Spoonful! A smooth and aromatic blend of pure ginger, packed with bold, peppery warmth to enhance your dishes. Elevate your cooking with its rich, zesty essence!" },
+      
+        { id: 6, name: "Mango Pulp", price: 270, image: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745057461/mango_pulp_eajyza.jpg", sales: 80, description: "Sun ripened mangoes, handpicked at peak sweetness, pured into a velvty,golden pulp. Bursting with tropical flavour and natural aroma, perfect for smoothies, desserts or drinks. A spoonful of sunshine that brings summer to every bite!" },
+
+        { id: 8, name: "Peanut Chutney", price: 240, image: "https://res.cloudinary.com/de7lcfzph/image/upload/v1745057264/peanut_dw4vu3.jpg", sales: 50, description: "Nutty Fusion of Rich & Spicy Goodness! A creamy blend of roasted peanuts and bold spices, crafted to deliver a perfect balance of crunch, heat, and irresistible flavor. Every spoonful adds a savory depth, elevating your meals with its earthy, zesty essence!" },
       ],
     },
   ];

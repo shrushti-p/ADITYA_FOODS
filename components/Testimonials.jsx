@@ -189,7 +189,7 @@ const Testimonials = () => {
         </button>
       </div>
     </div>
-    <Footer></Footer>
+    {/* <Footer></Footer> */}
     </>
 
   );

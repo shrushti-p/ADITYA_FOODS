@@ -108,7 +108,7 @@ const Categories = () => {
           />
         )}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

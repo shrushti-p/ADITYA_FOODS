@@ -98,8 +98,8 @@ const HomePage = () => {
     <HeroProducts></HeroProducts>
     <StatsSection></StatsSection>
     <HowToOrder></HowToOrder>
- 
-    <Footer></Footer>
+{/*  
+    <Footer></Footer> */}
    
 
     </>

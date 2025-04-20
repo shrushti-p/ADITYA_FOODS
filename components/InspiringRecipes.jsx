@@ -397,7 +397,7 @@ const InspiringRecipes = () => {
         </div>
       ))}
       
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

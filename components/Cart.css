@@ -111,7 +111,7 @@ thead th, tbody td {
   width: 100%;
   padding: 10px;
   background: #f8b300;
-  color: white;
+  color: white;     
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -124,3 +124,60 @@ thead th, tbody td {
   flex-direction: column; /* Moves the order summary below products */
 }
 
+@media (max-width: 768px) {
+  .cart-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .cart-items {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .product-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .product-info img {
+    width: 100%;
+    height: auto;
+  }
+
+  thead {
+    display: none; /* Hide table headers on small screens */
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+  }
+
+  .quantity-controls {
+    gap: 10px;
+  }
+
+  .order-summary {
+    padding: 15px;
+  }
+
+  .voucher {
+    flex-direction: column;
+  }
+
+  .voucher button {
+    width: 100%;
+  }
+
+  .checkout-btn {
+    font-size: 14px;
+  }
+}

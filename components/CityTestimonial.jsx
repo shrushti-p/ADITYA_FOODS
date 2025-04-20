@@ -210,7 +210,7 @@ const CityTestimonial = () => {
       </div>
       <br />
       <br />
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 };
