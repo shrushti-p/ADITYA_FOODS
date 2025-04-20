@@ -1,38 +1,25 @@
 /* Styles for large screens (desktops/tablets) */
-
 .city-container-wrapper {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   gap: 25px;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   overflow: hidden;
   width: 100%;
   position: relative;
-  align-items: end;
 }
 
-
-
-.city-heading{
-
-
-   margin: 20px auto 0px auto;
-   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   font-size: 45px;
-   text-align: center;
- /* 
-   font-size: 2.5rem; */
-   font-weight: bold;
-   color: #333;
- }
-
-.city-container:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 
-              0 8px 10px rgba(0, 0, 0, 0.2);
+.city-heading {
+  margin: 20px auto 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 45px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
 }
+
 .city-container {
   width: 280px;
   height: 380px;
@@ -45,7 +32,13 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   transform: translateY(0);
   overflow: hidden;
-  border: solid 1px black ;
+  border: solid 1px black;
+}
+
+.city-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 
+              0 8px 10px rgba(0, 0, 0, 0.2);
 }
 
 .city-arrows {
@@ -83,60 +76,58 @@
   transform: scale(1.1);
 }
 
-.city-para{
+.city-para {
   height: 200px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
 }
-.city-container-heading{
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   font-style: oblique;
+
+.city-container-heading {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique;
 }
 
-.city-third{
+.city-third {
   margin-bottom: 0;
   text-align: center;
 }
 
+.city-role{
+  margin-top: 720px;
+}
 
+/* Mobile view: Show 1 testimonial */
 @media (max-width: 700px) {
   .city-container-wrapper {
     overflow-x: auto;
     justify-content: flex-start;
     scroll-snap-type: x mandatory;
-    max-width: 728px;
+    max-width: 100%;
     box-sizing: border-box;
-    position: relative;
     align-items: center;
-
-  }
-
-  .city-para{
-    height:180px;
-    font-size: 15px;
-  }
-  .city-container-heading{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
-    font-size: 18px;
- }
-
-  .city-third{
-    margin-bottom: 0;
-    text-align: center;
   }
 
   .city-container {
-    width: 37%; /* Adjusted for better visibility */
-    min-width: 37%;
-    margin-left: 15px;
+    /* width: 90%;         Takes up 80% of screen for single-card view */
+    width: 360px;
+    height: 500px;
+    margin-left: 10px;
     scroll-snap-align: center;
+  }
+
+  .city-para {
+    height: 180px;
+    font-size: 15px;
+  }
+
+  .city-container-heading {
+    font-size: 18px;
   }
 
   .city-arrows {
     position: absolute;
-    top: 50%; /* Positioned vertically in the middle */
-    left: 86%;
+    top: 50%;
+    left: 91%;
     transform: translate(-50%, -50%);
     justify-content: center;
     align-items: center;
@@ -145,19 +136,19 @@
     width: auto;
   }
 
-  /* Hide the left arrow */
   .city-scroll-button:first-child {
-    display: none;
+    display: none; /* Hide left arrow */
   }
 
-  /* Style the right arrow to be between two cards */
   .city-scroll-button:last-child {
     pointer-events: all;
     position: relative;
-    transform: translateX(50%); /* Moves the arrow to the right */
+    transform: translateX(50%);
     z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     margin: 0;
     top: 0;
+  }
+  .city-role{
+    margin-top: 130px;
   }
 }

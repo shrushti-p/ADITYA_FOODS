@@ -202,7 +202,7 @@ const CityTestimonial = () => {
                     <h5 className="city-container-heading">
                       {testimonial.name}
                     </h5>
-                    <p>{testimonial.role}</p>
+                    <p className="city-role">{testimonial.role}</p>
                   </div>
                 </div>
               ))}

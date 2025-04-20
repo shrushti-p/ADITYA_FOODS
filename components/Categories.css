@@ -143,6 +143,31 @@
     grid-template-columns: 1fr;
   }
 
+  .menu-item {
+    flex-direction: column; /* Stack image and text */
+    align-items: flex-start;
+  }
+
+  .menu-info {
+    margin-top: 10px;
+    margin-left: 0; /* reset desktop spacing */
+    width: 100%;
+  }
+
+  .menu-info h3,
+  .menu-info p {
+    margin-left: 0;
+    justify-content: flex-start; /* align left */
+    text-align: left;
+  }
+
+  .menu-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
   .category-nav {
     overflow-x: auto;
     white-space: nowrap;
@@ -153,7 +178,6 @@
   }
 
   .category-button {
-    padding: 8px 15px;
     font-size: 14px;
   }
 }
