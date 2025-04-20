@@ -16,7 +16,6 @@
   width: 100%;
   height: 1px;
   background-color: #0c545500;
-
 }
 
 /* Footer Content */
@@ -26,55 +25,51 @@
   justify-content: space-between;
   gap: 20px;
   padding: 20px 0;
-  max-width: 1200px; /* Limit the width for better alignment */
-  margin: 0 auto; /* Center the footer content */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Footer Sections */
+/* Footer Sections - flex column layout */
 .footer-section {
   flex: 1;
   min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-/* 0e8081 */
+
 /* Social Section - Align to the Left */
-.footer-section social-section {
-  text-align: left;
+.footer-section.social-section {
   margin-left: 30px;
 }
 
-
-/* Contact Section - Align to the Center */
+/* Contact Section - Center Alignment */
 .footer-section.contact-section {
-  text-align: center;
-}
-
-/* Contact Section Content Alignment */
-.footer-section.contact-section ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content below the heading */
-  padding: 0;
+  align-items: center;
 }
 
 /* Links Section - Align to the Right */
 .footer-section.links-section {
-  text-align: right;
-  margin-right: 20px; /* Move Quick Links slightly to the right */
+  align-items: flex-end;
+  margin-right: 20px;
 }
 
+/* Section Headings */
 .footer-section h3 {
   font-size: 1.25rem;
   color: #eb141b;
   margin-bottom: 1rem;
-  margin-right: 50px
- 
 }
 
+/* List Styling */
 .footer-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
+/* List Items */
 .footer-section ul li {
   color: #000000;
   margin-bottom: 0.75rem;
@@ -96,9 +91,10 @@
 
 /* Links Section - Align Links to the Right */
 .footer-section.links-section ul li {
-  justify-content: flex-end; /* Align links to the right */
+  justify-content: flex-end;
 }
 
+/* Links Styling */
 .footer-section ul li a {
   color: #000000;
   text-decoration: none;
@@ -127,17 +123,15 @@
   }
 
   .footer-section {
-    text-align: center;
+    align-items: center;
+    margin: 0;
   }
 
   .footer-section.links-section ul li {
-    justify-content: center; /* Center links on smaller screens */
+    justify-content: center;
   }
 
   .footer-section.contact-section ul {
-    align-items: center; /* Center contact content on smaller screens */
+    align-items: center;
   }
 }
-
-
-  

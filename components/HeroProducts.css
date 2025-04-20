@@ -24,7 +24,7 @@
 
 .products-container-hero{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
   overflow-y: scroll;
   height: 120vh;
   overflow-x: hidden;

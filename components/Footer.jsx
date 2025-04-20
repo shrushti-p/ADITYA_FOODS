@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -16,22 +24,38 @@ const Footer = () => {
           <h3>Social Families</h3>
           <ul>
             <li>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebook className="social-icon" /> Aditya Food Product
               </a>
             </li>
             <li>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaTwitter className="social-icon" /> @AdityafoodProduct
               </a>
             </li>
             <li>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram className="social-icon" /> @adityafoodproduct
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin className="social-icon" /> Aditya Food Product
               </a>
             </li>
@@ -73,9 +97,8 @@ const Footer = () => {
               <a href="/contactus">Contact Us</a>
             </li>
             <li>
-            <a href="/privacypolicy">Privacy Policy</a>
+              <a href="/privacypolicy">Privacy Policy</a>
             </li>
-          
           </ul>
         </div>
       </div>
@@ -92,7 +115,6 @@ const Footer = () => {
 };
 
 export default Footer;
-
 
 // import React from "react";
 // import "./Footer.css";
@@ -167,11 +189,9 @@ export default Footer;
 //       </div>
 
 //       <div className="copyright">
-//          <p>Copyright © 2025 Aditya Foods. All Rights Reserved.</p>      
+//          <p>Copyright © 2025 Aditya Foods. All Rights Reserved.</p>
 //  </div>
 //     </footer>
-
-
 
 //   );
 // };
