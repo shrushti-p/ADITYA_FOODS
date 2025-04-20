@@ -253,7 +253,7 @@
     padding: 10px 16px;
   }
 } */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .testimonials-container {
     justify-content: center;
   }
