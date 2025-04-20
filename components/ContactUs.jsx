@@ -70,7 +70,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
        
   );
