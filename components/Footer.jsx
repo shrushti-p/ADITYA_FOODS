@@ -70,18 +70,18 @@ const Footer = () => {
               <FaMapMarkerAlt className="contact-icon" />
               <span>
                 Aditya Foods, <br />
-                G1 - 200(A) Agro Food Park, <br />
-                Boranada, Jodhpur (Raj.) India, <br />
-                P.O 342012
+                Samta Nagar,Dam Road, <br />
+                Industrial Area, Udgir, Latur, India, <br />
+                P.O 413517
               </span>
             </li>
             <li>
               <FaPhone className="contact-icon" />
-              <span>+91 6375849028</span>
+              <span>+91 86006 05659</span>
             </li>
             <li>
               <FaEnvelope className="contact-icon" />
-              <span>business@adityafoodproduct.com</span>
+              <span>adityafood2015@gmail.com</span>
             </li>
           </ul>
         </div>
