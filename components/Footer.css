@@ -37,8 +37,9 @@
 }
 /* 0e8081 */
 /* Social Section - Align to the Left */
-.footer-section.social-section {
+.footer-section social-section {
   text-align: left;
+  margin-left: 30px;
 }
 
 
