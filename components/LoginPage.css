@@ -53,6 +53,7 @@ form {
 .login-submit-btn {
   width: 100%;
   padding: 12px;
+  /* background: #007bff; */
   border: none;
   color: white;
   font-size: 16px;

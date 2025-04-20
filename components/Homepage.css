@@ -87,6 +87,8 @@
 
   margin-left: 60px;
   margin-right: 60px;
+  align-items: center;
+  justify-content: center;
 }
 ::-webkit-scrollbar{
   width: 0;
@@ -106,6 +108,7 @@
   background-color: #f8c2001b;
   padding: 7px;
   margin-bottom: 0;
+  
 }
 
 .image-name {
@@ -115,8 +118,8 @@
   color: #333;
 }
 
-/* Scroll Buttons */
-.scroll-forward-button,
+
+/* .scroll-forward-button,
 .scroll-backward-button {
   position: absolute;
   bottom: 60%;
@@ -134,7 +137,7 @@
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-}
+} */
 
 .scroll-forward-button {
   right: 10px;
@@ -177,6 +180,8 @@
     font-size: 1rem;
   }
 
+  
+
  
 
   .circle-image {
@@ -193,6 +198,22 @@
     width: 35px;
     height: 35px;
     font-size: 18px;
+
+    position: absolute;
+    bottom: 60%;
+    transform: translateY(50%);
+    background-color: #00b4ef;
+    color: white;
+    border: none;
+    border-radius: 50%;
+
+  
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 }
 
@@ -204,6 +225,28 @@
   .subtitle {
     font-size: 0.9rem;
   }
+  .scroll-forward-button,
+  .scroll-backward-button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+
+    position: absolute;
+    bottom: 60%;
+    transform: translateY(50%);
+    background-color: #00b4ef;
+    color: white;
+    border: none;
+    border-radius: 50%;
+
+  
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
 
   .circle-image {
     width: 80px;
@@ -214,5 +257,37 @@
     font-size: 0.8rem;
   }
 } 
+
+@media (min-width: 1024px) {
+  .scroll-forward-button,
+  .scroll-backward-button {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .scroll-forward-button,
+  .scroll-backward-button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+
+    position: absolute;
+    bottom: 60%;
+    transform: translateY(50%);
+    background-color: #00b4ef;
+    color: white;
+    border: none;
+    border-radius: 50%;
+
+  
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+}
 
 
