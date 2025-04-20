@@ -37,7 +37,7 @@ form {
   border: 1px solid #d1d1d1;
   border-radius: 6px;
   font-size: 16px;
-  background-color: #ffffff; /* Ensures input background stays white */
+  background-color: #ec8787; /* Ensures input background stays white */
   color: #333;
   transition: all 0.3s ease-in-out;
 }

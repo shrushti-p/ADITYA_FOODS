@@ -41,6 +41,7 @@
   text-align: left;
 }
 
+
 /* Contact Section - Align to the Center */
 .footer-section.contact-section {
   text-align: center;
@@ -62,8 +63,10 @@
 
 .footer-section h3 {
   font-size: 1.25rem;
-  color: #ed2124;
+  color: #eb141b;
   margin-bottom: 1rem;
+  margin-right: 50px
+ 
 }
 
 .footer-section ul {

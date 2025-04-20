@@ -8,102 +8,103 @@ const testimonialsData = [
   {
     rating: 4.5,
     text: "The mango pulp is consistently fresh and of premium quality. Our customers love the natural sweetness, making it a bestseller for mango-based desserts and beverages.",
-    role: "Client",
+    role: "Client-Pune",
+    
   },
   {
     rating: 5.0,
     text:  "We have been sourcing mango pulp in bulk, and the taste and texture remain uniform in every batch. Perfect for large-scale juice production!",
-    role: "Client",
+    role: "Client-Latur",
   },
   {
     rating: 4.0,
     text: "Rich in flavor and color, this mango pulp enhances the taste of our sweets and milkshakes. A must-have for our business!",
-    role: "Client",
+    role: "Client-Hyderabad",
   },
   {
     rating: 4.8,
     text: "The custard apple pulp is creamy and naturally sweet. It blends perfectly in our ice creams and desserts, making it a customer favorite.",
-    role: "Client",
+    role: "Client-Nagpur",
   },
   {
     rating: 4.5,
     text: "Exceptional quality! The pulp is thick, fresh, and free from artificial preservatives, making it ideal for our large-scale production.",
-    role: "Client",
+    role: "Client-Nashik",
   },
   {
     rating: 4.0,
     text: "This guava pulp has a rich aroma and a perfect balance of sweetness and tanginess. It helps us maintain consistency in our fruit-based products.",
-    role: "Client",
+    role: "Client-Mumbai",
   },
   {
     rating: 4.2,
     text: "We use it for making juices and jams, and the quality never disappoints. It’s fresh, natural, and always delivered on time.",
-    role: "Client",
+    role: "Client-Aurangabad",
   },
   {
     rating: 4.2,
     text: "The jamun pulp retains the authentic taste and color, making it a valuable ingredient in our health drinks and desserts.",
-    role: "Client",
+    role: "Client-Nanded",
   },
   {
     rating: 4.4,
     text: "We order in bulk, and the quality remains uniform across shipments. The pulp is fresh, smooth, and free from artificial flavors.",
-    role: "Client",
+    role: "Client-Parbhani",
   },
   {
     rating: 4.0,
     text: "The peas are sweet, fresh, and well-packed. They retain their vibrant green color even after cooking, which is crucial for our frozen food business.",
-    role: "Client",
+    role: "Client-Jalna",
   },
   {
     rating: 4.8,
     text: "Best quality green peas we have used. They cook well and maintain their texture, making them ideal for large-scale catering services.",
-    role: "Client",
+    role: "Client-Beed",
   },
   {
     rating: 4.5,
     text: "The paste has a strong aroma and authentic taste. It saves us time in bulk food preparation without compromising on flavor.",
-    role: "Client",
+    role: "Client-Bengaluru",
   },
   {
     rating: 4.8,
     text: "Consistently good quality and no artificial preservatives. Our restaurant chain relies on this for maintaining the taste of our dishes.",
-    role: "Client",
+    role: "Client-Solapur",
   },
   {
     rating: 4.9,
     text: "Soft, fresh, and perfect for bulk orders. The texture remains intact even after frying or cooking in gravies.",
-    role: "Client",
+    role: "Client-Tuljapur",
   },
   {
     rating: 4.82,
     text: "High-quality paneer that absorbs spices well. Our customers appreciate the freshness in every bite!",
-    role: "Client",
+    role: "Client-Pandharpur",
   },
   {
     rating: 4.0,
     text: "We have been ordering in bulk for our sweet manufacturing unit, and the quality remains top-notch every time!",
-    role: "Client",
+    role: "Client-Gulbarga",
   },
   {
     rating: 4.1,
     text: "Pure and aromatic ghee that enhances the taste of our sweets and food products. Our customers love the authentic flavor.",
-    role: "Client",
+    role: "Client-Akola",
   },
   {
     rating: 4.0,
     text: "The richness and purity of this ghee make it stand out. It adds a homemade touch to all our dairy-based items.",
-    role: "Client",
+    role: "Client-Sangli",
   },
   {
     rating: 4.3,
     text: "High-quality peanut oil that enhances the taste of traditional dishes. It’s pure and perfect for large-scale cooking.",
-    role: "Client",
+    role: "Client-Satara",
   },
     {
     rating: 4.4,
     text: "A light and healthy oil that meets our bulk cooking needs. It’s our go-to option for preparing large-scale meals.",
-    role: "Client",
+    role: "Client-Osmanabad",
   },
 ];
 

@@ -11,18 +11,28 @@ const SignupPage = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+ const handleSubmit = (e) => {
+  e.preventDefault();
 
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
+  if (formData.password !== formData.confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
 
-    console.log("Signup Data:", formData);
-  };
+  console.log("Signup Data:", formData);
+
+  // ✅ Clear the fields after successful submission
+  setFormData({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+};
+
 
   return (
     <div className="container">
@@ -30,7 +40,7 @@ const SignupPage = () => {
         <h2 className="text">Create an Account</h2>
 
         {/* Signup Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="username">
           <input
             type="text"
             name="username"

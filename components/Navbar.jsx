@@ -50,7 +50,7 @@ export default function Navbar() {
       {/* 🔹 Top Section */}
       <div className="navbar-top">
         <div className="logo">
-          <Link to="/">Aditya Foods</Link>
+          {/* <Link to="/">Aditya Foods</Link> */}
         </div>
 
         {/* 🔹 Search Bar */}

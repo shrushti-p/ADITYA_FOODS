@@ -2,6 +2,8 @@
 body {
   background-color: #fef7e5;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -21,6 +23,13 @@ body {
   max-width: 400px;
 }
 
+/* Heading */
+.signup-box h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
 /* Form Inputs */
 .input-field {
   width: 100%;
@@ -33,7 +42,7 @@ body {
 }
 
 .input-field:focus {
-  border-color: #ed2124;/*fbbf24*/
+  border-color: #ed2124;
   outline: none;
 }
 
@@ -51,5 +60,20 @@ body {
 }
 
 .signup-btn:hover {
-  background: #ed2124;
+  background: #c91416;
 }
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  font-size: 16px;
+
+  /* Change from grey to white */
+  background-color: #ffffff;
+  color: #333;
+
+  transition: all 0.3s ease-in-out;
+}
+

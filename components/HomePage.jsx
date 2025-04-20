@@ -80,9 +80,10 @@ const HomePage = () => {
             </div>
           ))}
         </div>
+        
 
         {/* Scroll Buttons */}
-        {/* <button
+        <button
           className="scroll-backward-button"
           onClick={handleScrollBackward}
         >
@@ -91,7 +92,7 @@ const HomePage = () => {
 
         <button className="scroll-forward-button" onClick={handleScrollForward}>
           <span className="forward-icon">→</span>
-        </button> */}
+        </button>
       </div>
     </div>
     

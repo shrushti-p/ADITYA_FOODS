@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="footer-content">
         {/* Left Section - Social Handles */}
         <div className="footer-section social-section">
-          <h3>Social Families</h3>
+          <h3 >Social Families</h3>
           <ul>
             <li>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
