@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 import {
   FaMapMarkerAlt,
-  FaPhone,
+  FaPhoneAlt,
   FaEnvelope,
   FaFacebook,
   FaTwitter,
@@ -76,7 +76,7 @@ const Footer = () => {
               </span>
             </li>
             <li>
-              <FaPhone className="contact-icon" />
+              <FaPhoneAlt className="contact-icon" />
               <span>+91 86006 05659</span>
             </li>
             <li>
