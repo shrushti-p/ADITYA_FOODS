@@ -1,4 +1,113 @@
-/* Navbar.css */
+.navbar {
+  width: 100%;
+  background-image: linear-gradient(#00b4ef, #00733400);
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 2%;
+  width: 140px;
+  height: 100px;
+  background-image: url("/images/logo1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: #ffffffa1;
+  border-radius: 50px;
+  padding: 8px 12px;
+  width: 70%;
+}
+
+.search-icon {
+  color: gray;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 8px;
+  color: black;
+}
+
+.home-icon {
+  display: flex;
+  gap: 30px;
+  margin-right: 4%;
+  margin-left: 10px;
+  color: #000000;
+}
+
+.iconss {
+  font-size: 30px;
+  cursor: pointer;
+  color: #000000;
+  transition: ease 0.3s;
+}
+
+.iconss:hover {
+  transform: scale(1.1);
+}
+
+.nav-bar {
+  margin: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #ed2124;
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #ed2124;      /* 🔴 active text color */
+  font-weight: bold;
+  border-bottom: 2px solid #ed2124; /* underline effect */
+}
+
+/* Search Results Styling */
 .search-results {
   position: absolute;
   top: 60px;
@@ -55,130 +164,9 @@
   color: red;
 }
 
-.navbar {
-    width: 100%;
-    background-image: linear-gradient(#00b4ef, #00733400);/*00b4ef*/
-  }
-  
-  .navbar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .logo{
-    margin-left: 2%;
-    width: 140px;
-    height: 100PX;
-    /* border: #000000 solid; */
-    background-image: url("/images/logo1.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    color: black;
-    background-color: #ffffffa1;
-    border-radius: 24px;
-    padding: 8px 12px;
-    width: 70%;
-    border-radius: 50px;
-  }
-  
-  .search-icon {
-    color: gray;
-  }
-  
-  .search-input {
-    border: none;
-    outline: none;
-    background: transparent;
-    width: 100%;
-    padding: 8px;
-    color: black;
-  }
-  
-  .home-icon {
-    display: flex;
-    gap: 30px;
-    margin-right: 4%;
-    margin-left: 10px;
-    color: #000000;
-    /* width: 12%; */
-  }
-  
-  .iconss {
-    font-size: 30px;
-    cursor: pointer;
-    color: #000000;
-    transition: ease 0.3s;
-  }
-  
-  .iconss:hover {
-    transform: scale(1.1);
-  }
-  .mobile-search {
-    display: none;
-  }
-  ::-webkit-scrollbar{
-    width: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .logo img{
-      width: 100px;
-      margin-top: -5px;
-      margin-left: 0;
-    }
-  }
-  
-  .nav-bar {
-    margin: auto;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  
-  .nav-list {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+@media (max-width: 768px) {
   .nav-item {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    border-radius: 0px;
+    border-right: #2ecaf681 solid 1px;
   }
-  
-  .nav-item:hover {
-    background-color: #ed2124;
-    color: white;
-  }
-
-  .nav-item.selected{
-    color: #ed2124;
-  }
-  
-  .nav-item.selected:hover{
-    color: #ffffff;
-  }
-  
-  @media (max-width: 768px) {
-    /* .nav-list {
-      gap: 0;
-    } */
-    .nav-item {  
-        border-radius: 0px;    
-        border-right: #2ecaf681 solid 1px; 
-      }
-      
-  }
+}
