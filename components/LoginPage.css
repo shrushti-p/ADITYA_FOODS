@@ -75,13 +75,18 @@ form {
 /* Toggle Button (Register/Login Switch) */
 
 .login-toggle-btn {
-  border: none;
-  /* color: #007bff; */
+  /* border: none; */
+  color: #007bff;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   margin-top: 10px;
   transition: color 0.3s ease-in-out;
+  padding: 0px 13px;
+  border-radius: 12px;
+  
+  
+
  
 }
 

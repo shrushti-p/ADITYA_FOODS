@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaUser, FaShoppingCart } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import axios from "axios";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const [selectedCategory, setSelectedCategory] = useState(0);
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  // 🔹 Fetch products from backend
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -24,7 +22,6 @@ export default function Navbar() {
     fetchProducts();
   }, []);
 
-  // 🔹 Filter products based on search input
   useEffect(() => {
     if (search.trim()) {
       const results = products.filter((product) =>
@@ -36,7 +33,6 @@ export default function Navbar() {
     }
   }, [search, products]);
 
-  // 🔹 Navigation links
   const navItems = [
     { id: 1, name: "Home", path: "/" },
     { id: 2, name: "Categories", path: "/categories" },
@@ -47,13 +43,11 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* 🔹 Top Section */}
       <div className="navbar-top">
         <div className="logo">
-          {/* <Link to="/">Aditya Foods</Link> */}
+          <Link to="/" className="logo-link"></Link>
         </div>
 
-        {/* 🔹 Search Bar */}
         <div className="search-bar">
           <FiSearch className="search-icon" />
           <input
@@ -65,7 +59,6 @@ export default function Navbar() {
           />
         </div>
 
-        {/* 🔹 User & Cart */}
         <div className="home-icon">
           <Link to="/login">
             <FaUser className="iconss" />
@@ -76,7 +69,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 🔹 Show search results if search term exists */}
       {search ? (
         <div className="search-results">
           {filteredProducts.length > 0 ? (
@@ -106,20 +98,19 @@ export default function Navbar() {
           )}
         </div>
       ) : (
-        // 🔹 Show main nav links only when not searching
         <div className="nav-bar">
           <ul className="nav-list">
             {navItems.map((item) => (
-              <li
-                key={item.id}
-                className={`nav-item ${
-                  selectedCategory === item.id ? "selected" : ""
-                }`}
-                onClick={() => setSelectedCategory(item.id)}
-              >
-                <Link to={item.path} className="nav-link">
+              <li key={item.id} className="nav-item">
+                <NavLink
+                  to={item.path}
+                  end={item.path === "/"} // only apply "end" for Home
+                  className={({ isActive }) =>
+                    `nav-link ${isActive ? "active" : ""}`
+                  }
+                >
                   {item.name}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
