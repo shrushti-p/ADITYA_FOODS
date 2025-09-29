@@ -23,7 +23,10 @@ const Categories = () => {
     <>
       <div className="categories-container">
         <h1 className="title">
-          Categories <br />
+          <span className="typewriter">Categories</span>
+
+
+
           {/* <img
             // src="images/section_delimiter_1.png"
             alt="img"
@@ -40,9 +43,8 @@ const Categories = () => {
           {categories.map((category) => (
             <button
               key={category._id}
-              className={`category-button ${
-                selectedCategory === category.name ? "selected" : ""
-              }`}
+              className={`category-button ${selectedCategory === category.name ? "selected" : ""
+                }`}
               onClick={() => setSelectedCategory(category.name)}
             >
               {category.name}
@@ -53,6 +55,31 @@ const Categories = () => {
         <div className="menu-items">
           {selectedCategory === "All"
             ? allProducts.map((item) => (
+              <div
+                key={item._id}
+                className="menu-item"
+                onClick={() => setSelectedProduct(item)}
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="menu-image"
+                />
+                <div className="menu-info">
+                  <h3>{item.name}</h3>
+                  <p>{item.description}</p>
+                  {item.variants.map((variant, index) => (
+                    <p key={index} className="price">
+                      {variant.weight} - {variant.price}/-
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))
+            : categories
+              .filter((cat) => cat.name === selectedCategory)
+              .flatMap((cat) => cat.products)
+              .map((item) => (
                 <div
                   key={item._id}
                   className="menu-item"
@@ -68,37 +95,12 @@ const Categories = () => {
                     <p>{item.description}</p>
                     {item.variants.map((variant, index) => (
                       <p key={index} className="price">
-                        {variant.weight} - {variant.price}/-
+                        {variant.weight} - Rs. {variant.price}
                       </p>
                     ))}
                   </div>
                 </div>
-              ))
-            : categories
-                .filter((cat) => cat.name === selectedCategory)
-                .flatMap((cat) => cat.products)
-                .map((item) => (
-                  <div
-                    key={item._id}
-                    className="menu-item"
-                    onClick={() => setSelectedProduct(item)}
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="menu-image"
-                    />
-                    <div className="menu-info">
-                      <h3>{item.name}</h3>
-                      <p>{item.description}</p>
-                      {item.variants.map((variant, index) => (
-                        <p key={index} className="price">
-                          {variant.weight} - Rs. {variant.price}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+              ))}
         </div>
 
         {selectedProduct && (
@@ -107,7 +109,7 @@ const Categories = () => {
             onClose={() => setSelectedProduct(null)}
           />
         )}
-      </div>
+      </div >
       {/* <Footer /> */}
     </>
   );
