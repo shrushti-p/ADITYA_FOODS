@@ -90,6 +90,52 @@ form {
   /* color: #0056b3; */
 }
 
+/* My code  */
+
+/* Password input wrapper for positioning */
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrapper .login-input {
+  padding-right: 45px;
+}
+
+/* Password toggle button styling */
+.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0288d1;
+  transition: color 0.3s ease;
+}
+
+.password-toggle-btn:hover {
+  color: #01579b;
+}
+
+.password-toggle-btn:focus {
+  outline: 2px solid #0288d1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Eye icon styling */
+.eye-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
 /* Responsive Design */
 @media (max-width: 480px) {
   .login-container {
